@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Darshana Mehta Portfolio - EMS</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  letter-spacing: 1px;
+}
+
+/* GLASS CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+/* REVEAL */
+.card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* HOVER PREMIUM */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* PARALLAX */
+.parallax {
+  transform: translateY(0px);
+  transition: transform 0.2s linear;
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 30px;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #3b82f6, #6366f1);
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(99,102,241,0.8);
+}
+
+/* IMAGE */
+.gallery img {
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+.gallery img:hover {
+  transform: scale(1.08);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+/* SECTION */
+.section {
+  padding: 80px 20px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Hi, I'm Vighnesh 👋</h1>
+  <p>Full Stack Developer | .NET | React | Data Scientist</p>
+  <button class="btn" onclick="scrollToSection()">View My Project</button>
+</section>
+
+<!-- PROJECT -->
+<section id="project" class="section container">
+  <h2>🚀 Employee Management System</h2>
+  <p>A complete HR management solution with multiple modules.</p>
+
+  <div class="grid">
+    <div class="card">📊 Dashboard & Analytics</div>
+    <div class="card">👨‍💼 Employee Management</div>
+    <div class="card">📅 Attendance System</div>
+    <div class="card">💰 Payroll System</div>
+    <div class="card">📝 Leave Management</div>
+    <div class="card">📈 Reports & Export</div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="section container">
+  <h2>⚙️ Tech Stack</h2>
+  <div class="grid">
+    <div class="card">.NET Core</div>
+    <div class="card">C#</div>
+    <div class="card">SQL Server</div>
+    <div class="card">JavaScript</div>
+    <div class="card">HTML/CSS</div>
+    <div class="card">Tailwind / Bootstrap</div>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="section container gallery">
+  <h2>📸 Screenshots</h2>
+  <div class="grid">
+    <img src="images/login.png">
+    <img src="images/dashboard.png">
+    <img src="images/attendance.png">
+    <img src="images/employees.png">
+    <img src="images/payroll.png">
+    <img src="images/reports.png">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section container">
+  <h2>📞 Contact</h2>
+  <p>Email: your@email.com</p>
+</section>
+
+<div class="footer">
+  © 2026 Darshana Portfolio
+</div>
+
+<script>
+// SMOOTH SCROLL REVEAL (Apple style)
+const elements = document.querySelectorAll(".card");
+
+function revealOnScroll() {
+  elements.forEach((el, i) => {
+    const top = el.getBoundingClientRect().top;
+
+    if (top < window.innerHeight - 100) {
+      setTimeout(() => {
+        el.classList.add("show");
+      }, i * 100); // stagger effect
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+
+// PARALLAX EFFECT
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".parallax").forEach(el => {
+    let speed = 0.3;
+    let offset = window.scrollY * speed;
+    el.style.transform = `translateY(${offset}px)`;
+  });
+});
+
+
+// MAGNETIC BUTTON EFFECT (Apple feel)
+const btn = document.querySelector(".btn");
+
+btn.addEventListener("mousemove", (e) => {
+  const rect = btn.getBoundingClientRect();
+  const x = e.clientX - rect.left - rect.width/2;
+  const y = e.clientY - rect.top - rect.height/2;
+
+  btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+});
+
+btn.addEventListener("mouseleave", () => {
+  btn.style.transform = "translate(0,0)";
+});
+</script>
+
+</body>
+</html>
