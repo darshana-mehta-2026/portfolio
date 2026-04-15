@@ -3,1027 +3,1776 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIG Interiors – Maa Interior Gallery | Gandhinagar, Gujarat</title>
-<meta name="description" content="MIG Interiors – 7 years of crafting stunning interiors in Gandhinagar & Gujarat. Interior design, turnkey projects, modular furniture, commercial interiors & more.">
+<title>MIG Interiors — Maa Interior Gallery · Gandhinagar, Gujarat</title>
+<meta name="description" content="MIG Interiors — Bespoke interior design, turnkey projects & modular furniture in Gandhinagar, Gujarat. 7 years of crafting extraordinary spaces.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --gold: #B8862A;
-    --gold-light: #D4A84B;
-    --gold-pale: #F5EDD8;
-    --gold-deep: #8A6218;
-    --dark: #0F0C07;
-    --dark-2: #1A1408;
-    --dark-3: #241C0C;
-    --cream: #FAF6EF;
-    --cream-2: #F0E9D9;
-    --text: #1A1408;
-    --text-muted: #6B5C3E;
-    --text-light: #9B8C72;
-    --white: #FFFFFF;
-    --whatsapp: #25D366;
-    --radius: 4px;
-    --radius-lg: 10px;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; line-height: 1.15; }
-
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    padding: 0 5%;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 70px;
-    background: rgba(15,12,7,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(184,134,42,0.15);
-    transition: all 0.3s;
-  }
-  nav.scrolled { background: rgba(15,12,7,0.98); height: 60px; }
-
-  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .nav-logo-icon {
-    width: 40px; height: 40px;
-    background: var(--gold);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px; font-weight: 600;
-    color: var(--dark);
-    letter-spacing: 0.05em;
-  }
-  .nav-logo-text { display: flex; flex-direction: column; }
-  .nav-logo-text span:first-child { font-size: 14px; font-weight: 500; color: var(--white); letter-spacing: 0.08em; }
-  .nav-logo-text span:last-child { font-size: 10px; color: var(--gold-light); letter-spacing: 0.06em; }
-
-  .nav-links { display: flex; gap: 32px; list-style: none; }
-  .nav-links a { font-size: 13px; color: rgba(255,255,255,0.65); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--gold-light); }
-
-  .nav-cta {
-    background: var(--gold);
-    color: var(--dark);
-    font-size: 12px; font-weight: 500;
-    padding: 9px 20px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    letter-spacing: 0.06em;
-    transition: background 0.2s;
-  }
-  .nav-cta:hover { background: var(--gold-light); }
-
-  .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
-  .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--white); transition: all 0.3s; }
-
-  /* ── HERO ── */
-  #hero {
-    min-height: 100vh;
-    background: var(--dark);
-    display: flex; align-items: center;
-    position: relative; overflow: hidden;
-    padding: 100px 5% 60px;
-  }
-
-  .hero-pattern {
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(184,134,42,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(184,134,42,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-  .hero-glow {
-    position: absolute;
-    width: 600px; height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(184,134,42,0.12) 0%, transparent 65%);
-    top: -100px; right: -100px;
-    pointer-events: none;
-  }
-  .hero-glow-2 {
-    position: absolute;
-    width: 400px; height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(184,134,42,0.08) 0%, transparent 65%);
-    bottom: 50px; left: -100px;
-    pointer-events: none;
-  }
-
-  .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(184,134,42,0.12);
-    border: 1px solid rgba(184,134,42,0.25);
-    padding: 6px 14px;
-    border-radius: 100px;
-    font-size: 11px; color: var(--gold-light);
-    letter-spacing: 0.1em;
-    margin-bottom: 24px;
-    animation: fadeUp 0.8s ease both;
-  }
-  .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
-
-  .hero-title {
-    font-size: clamp(42px, 5vw, 68px);
-    font-weight: 500;
-    color: var(--white);
-    line-height: 1.08;
-    margin-bottom: 20px;
-    animation: fadeUp 0.8s 0.1s ease both;
-  }
-  .hero-title em { color: var(--gold-light); font-style: italic; }
-
-  .hero-desc {
-    font-size: 15px;
-    color: rgba(255,255,255,0.5);
-    max-width: 440px;
-    line-height: 1.8;
-    margin-bottom: 32px;
-    animation: fadeUp 0.8s 0.2s ease both;
-  }
-
-  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; animation: fadeUp 0.8s 0.3s ease both; }
-
-  .btn-primary {
-    background: var(--gold);
-    color: var(--dark);
-    font-size: 13px; font-weight: 500;
-    padding: 14px 28px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: background 0.2s, transform 0.15s;
-    display: inline-flex; align-items: center; gap: 8px;
-  }
-  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
-
-  .btn-outline {
-    border: 1px solid rgba(255,255,255,0.2);
-    color: rgba(255,255,255,0.75);
-    font-size: 13px;
-    padding: 14px 28px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: border-color 0.2s, color 0.2s;
-    display: inline-flex; align-items: center; gap: 8px;
-  }
-  .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); }
-
-  .hero-stats { display: flex; gap: 36px; animation: fadeUp 0.8s 0.4s ease both; }
-  .hero-stat { }
-  .hero-stat .num { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: var(--gold-light); font-weight: 500; line-height: 1; }
-  .hero-stat .lbl { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.06em; margin-top: 4px; }
-  .stat-divider { width: 1px; background: rgba(255,255,255,0.08); align-self: stretch; }
-
-  .hero-visual { position: relative; animation: fadeUp 0.8s 0.2s ease both; }
-  .hero-img-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 200px 160px; gap: 10px; }
-  .hero-img-grid .img-tall { grid-row: span 2; }
-  .hero-img {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    background: var(--dark-3);
-    position: relative;
-  }
-  .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; }
-  .hero-img .img-label {
-    position: absolute; bottom: 10px; left: 10px;
-    background: rgba(15,12,7,0.75);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(184,134,42,0.2);
-    padding: 4px 10px;
-    border-radius: 100px;
-    font-size: 10px; color: var(--gold-light);
-    letter-spacing: 0.06em;
-  }
-  .hero-img-placeholder {
-    width: 100%; height: 100%;
-    display: flex; align-items: center; justify-content: center;
-    flex-direction: column; gap: 8px;
-    color: rgba(255,255,255,0.15);
-    font-size: 11px; letter-spacing: 0.06em;
-  }
-  .hero-img-placeholder svg { opacity: 0.3; }
-
-  .hero-card {
-    position: absolute;
-    bottom: -20px; left: -20px;
-    background: rgba(26,20,8,0.9);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(184,134,42,0.2);
-    border-radius: var(--radius-lg);
-    padding: 14px 18px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .hero-card-icon { width: 36px; height: 36px; background: rgba(184,134,42,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-  .hero-card-text .top { font-size: 14px; font-weight: 500; color: var(--white); }
-  .hero-card-text .bot { font-size: 11px; color: var(--gold-light); }
-
-  /* ── SECTIONS ── */
-  section { padding: 90px 5%; }
-
-  .container { max-width: 1200px; margin: 0 auto; }
-
-  .section-eyebrow {
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 0.14em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .section-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); }
-
-  .section-title { font-size: clamp(32px, 4vw, 48px); font-weight: 500; color: var(--text); margin-bottom: 16px; }
-  .section-title.light { color: var(--white); }
-  .section-sub { font-size: 15px; color: var(--text-muted); max-width: 520px; line-height: 1.8; }
-  .section-sub.light { color: rgba(255,255,255,0.55); }
-
-  /* ── SERVICES ── */
-  #services { background: var(--cream); }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-    margin-top: 50px;
-  }
-
-  .service-card {
-    background: var(--white);
-    border: 1px solid rgba(184,134,42,0.12);
-    border-radius: var(--radius-lg);
-    padding: 28px 24px;
-    position: relative; overflow: hidden;
-    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-    cursor: default;
-  }
-  .service-card::after {
-    content: '';
-    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
-    background: var(--gold);
-    transform: scaleX(0); transform-origin: left;
-    transition: transform 0.3s;
-  }
-  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(184,134,42,0.12); border-color: rgba(184,134,42,0.3); }
-  .service-card:hover::after { transform: scaleX(1); }
-
-  .service-icon {
-    width: 48px; height: 48px;
-    background: var(--gold-pale);
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 18px;
-  }
-  .service-icon svg { color: var(--gold-deep); }
-
-  .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; margin-bottom: 8px; color: var(--text); }
-  .service-card p { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
-
-  .service-card .tag-list { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 14px; }
-  .service-tag { font-size: 10px; padding: 3px 9px; border-radius: 100px; background: var(--gold-pale); color: var(--gold-deep); letter-spacing: 0.04em; }
-
-  /* ── PORTFOLIO ── */
-  #portfolio { background: var(--dark); }
-
-  .portfolio-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
-
-  .portfolio-filters { display: flex; gap: 8px; flex-wrap: wrap; }
-  .filter-btn {
-    padding: 7px 18px;
-    border-radius: 100px;
-    border: 1px solid rgba(255,255,255,0.12);
-    background: transparent;
-    color: rgba(255,255,255,0.5);
-    font-size: 12px; font-family: 'DM Sans', sans-serif;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .filter-btn.active, .filter-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--dark); }
-
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 200px;
-    gap: 12px;
-  }
-  .portfolio-item {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    background: var(--dark-3);
-    position: relative;
-    cursor: pointer;
-  }
-  .portfolio-item.tall { grid-row: span 2; }
-  .portfolio-item.wide { grid-column: span 2; }
-
-  .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; opacity: 0.8; }
-  .portfolio-item:hover img { transform: scale(1.05); opacity: 1; }
-
-  .portfolio-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(15,12,7,0.85) 0%, transparent 50%);
-    display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 18px;
-    opacity: 0; transition: opacity 0.3s;
-  }
-  .portfolio-item:hover .portfolio-overlay { opacity: 1; }
-  .portfolio-overlay h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); margin-bottom: 4px; }
-  .portfolio-overlay span { font-size: 11px; color: var(--gold-light); letter-spacing: 0.06em; }
-
-  .portfolio-placeholder {
-    width: 100%; height: 100%;
-    display: flex; align-items: center; justify-content: center;
-    flex-direction: column; gap: 6px;
-    color: rgba(255,255,255,0.12); font-size: 11px; letter-spacing: 0.06em;
-  }
-
-  /* ── BEFORE/AFTER ── */
-  #beforeafter { background: var(--cream-2); }
-
-  .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
-  .ba-card { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(184,134,42,0.12); }
-  .ba-images { display: grid; grid-template-columns: 1fr 1fr; height: 220px; }
-  .ba-side { position: relative; overflow: hidden; }
-  .ba-side img { width: 100%; height: 100%; object-fit: cover; }
-  .ba-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 6px; font-size: 10px; letter-spacing: 0.06em; color: rgba(0,0,0,0.2); }
-  .ba-side-label {
-    position: absolute; top: 10px; left: 10px;
-    font-size: 10px; font-weight: 500; letter-spacing: 0.08em;
-    padding: 3px 10px; border-radius: 100px;
-  }
-  .ba-side-label.before { background: rgba(0,0,0,0.6); color: rgba(255,255,255,0.7); }
-  .ba-side-label.after { background: var(--gold); color: var(--dark); }
-  .ba-divider { width: 3px; background: var(--gold); position: relative; }
-  .ba-divider::after { content: '↔'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 28px; height: 28px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--dark); }
-  .ba-info { padding: 16px 20px; }
-  .ba-info h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; margin-bottom: 4px; }
-  .ba-info p { font-size: 12px; color: var(--text-muted); }
-  .ba-tags { display: flex; gap: 5px; margin-top: 10px; flex-wrap: wrap; }
-
-  /* ── WHY US ── */
-  #whyus { background: var(--dark); }
-
-  .whyus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 0; }
-  .whyus-left .section-eyebrow { margin-top: 50px; }
-
-  .features-list { display: flex; flex-direction: column; gap: 24px; margin-top: 36px; }
-  .feature-item { display: flex; gap: 16px; align-items: flex-start; }
-  .feature-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px; color: var(--gold);
-    width: 28px; flex-shrink: 0;
-    padding-top: 2px;
-  }
-  .feature-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); margin-bottom: 4px; }
-  .feature-item p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; }
-
-  .whyus-right { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .metric-card {
-    background: var(--dark-3);
-    border: 1px solid rgba(184,134,42,0.12);
-    border-radius: var(--radius-lg);
-    padding: 24px 20px;
-    position: relative;
-  }
-  .metric-card:first-child { grid-column: span 2; }
-  .metric-card .metric-num { font-family: 'Cormorant Garamond', serif; font-size: 52px; color: var(--gold-light); font-weight: 500; line-height: 1; margin-bottom: 6px; }
-  .metric-card .metric-label { font-size: 13px; color: rgba(255,255,255,0.45); }
-  .metric-card .metric-sub { font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 4px; }
-
-  /* ── PROCESS ── */
-  #process { background: var(--cream); }
-
-  .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 56px; position: relative; }
-  .process-steps::before {
-    content: '';
-    position: absolute;
-    top: 28px; left: calc(12.5% + 14px); right: calc(12.5% + 14px);
-    height: 1px; background: rgba(184,134,42,0.25);
-    z-index: 0;
-  }
-  .process-step { text-align: center; position: relative; padding: 0 16px; }
-  .step-num {
-    width: 56px; height: 56px; border-radius: 50%;
-    border: 1px solid rgba(184,134,42,0.3);
-    background: var(--cream);
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 20px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px; color: var(--gold);
-    position: relative; z-index: 1;
-    transition: background 0.3s, border-color 0.3s;
-  }
-  .process-step:hover .step-num { background: var(--gold); color: var(--dark); border-color: var(--gold); }
-  .process-step h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; margin-bottom: 8px; }
-  .process-step p { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
-
-  /* ── TESTIMONIALS ── */
-  #testimonials { background: var(--dark-2); }
-
-  .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
-  .review-card {
-    background: var(--dark-3);
-    border: 1px solid rgba(184,134,42,0.1);
-    border-radius: var(--radius-lg);
-    padding: 24px;
-    position: relative;
-  }
-  .review-card::before {
-    content: '"';
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 80px; color: rgba(184,134,42,0.1);
-    position: absolute; top: 10px; right: 20px;
-    line-height: 1;
-  }
-  .review-stars { display: flex; gap: 3px; margin-bottom: 14px; }
-  .star { color: var(--gold); font-size: 13px; }
-  .review-text { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 18px; font-style: italic; }
-  .review-author { display: flex; align-items: center; gap: 10px; }
-  .review-avatar {
-    width: 36px; height: 36px; border-radius: 50%;
-    background: rgba(184,134,42,0.2);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 14px; color: var(--gold-light); font-weight: 500;
-  }
-  .review-name { font-size: 13px; font-weight: 500; color: var(--white); }
-  .review-type { font-size: 11px; color: var(--gold-light); }
-
-  /* ── ENQUIRY ── */
-  #enquiry { background: var(--cream); }
-
-  .enquiry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-
-  .form-card {
-    background: var(--white);
-    border: 1px solid rgba(184,134,42,0.15);
-    border-radius: var(--radius-lg);
-    padding: 36px;
-  }
-  .form-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 6px; }
-  .form-card .form-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 28px; }
-
-  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .form-full { grid-column: span 2; }
-
-  .form-group { display: flex; flex-direction: column; gap: 6px; }
-  .form-group label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: var(--text-muted); text-transform: uppercase; }
-  .form-group input, .form-group select, .form-group textarea {
-    padding: 11px 14px;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: var(--radius);
-    font-size: 14px; font-family: 'DM Sans', sans-serif;
-    color: var(--text);
-    background: var(--cream);
-    transition: border-color 0.2s;
-    outline: none;
-    width: 100%;
-  }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); background: var(--white); }
-  .form-group textarea { resize: vertical; min-height: 100px; }
-
-  .service-checkboxes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
-  .check-item { display: flex; align-items: center; gap: 8px; cursor: pointer; }
-  .check-item input[type="checkbox"] { width: 14px; height: 14px; accent-color: var(--gold); }
-  .check-item span { font-size: 12px; color: var(--text-muted); }
-
-  .form-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
-  .btn-submit {
-    background: var(--gold);
-    color: var(--dark);
-    border: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px; font-weight: 500;
-    padding: 14px;
-    border-radius: var(--radius);
-    cursor: pointer;
-    letter-spacing: 0.04em;
-    transition: background 0.2s;
-    width: 100%;
-  }
-  .btn-submit:hover { background: var(--gold-light); }
-  .btn-wa {
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    background: var(--whatsapp);
-    color: var(--white);
-    border: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px; font-weight: 500;
-    padding: 14px;
-    border-radius: var(--radius);
-    cursor: pointer;
-    text-decoration: none;
-    transition: opacity 0.2s;
-    width: 100%;
-    text-align: center;
-  }
-  .btn-wa:hover { opacity: 0.9; }
-
-  .contact-panel { display: flex; flex-direction: column; gap: 20px; }
-  .contact-panel h3 { font-family: 'Cormorant Garamond', serif; font-size: 36px; }
-
-  .contact-card {
-    background: var(--dark);
-    border-radius: var(--radius-lg);
-    padding: 28px;
-  }
-  .contact-item { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .contact-item:last-child { border-bottom: none; }
-  .contact-icon { width: 38px; height: 38px; background: rgba(184,134,42,0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .contact-icon svg { color: var(--gold-light); }
-  .contact-label { font-size: 10px; letter-spacing: 0.1em; color: rgba(255,255,255,0.3); margin-bottom: 3px; text-transform: uppercase; }
-  .contact-value { font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; }
-  .contact-value a { color: var(--gold-light); text-decoration: none; }
-
-  .map-embed { border-radius: var(--radius-lg); overflow: hidden; height: 200px; border: 1px solid rgba(184,134,42,0.15); }
-  .map-embed iframe { width: 100%; height: 100%; border: none; }
-
-  .social-row { display: flex; gap: 10px; }
-  .social-btn {
-    display: flex; align-items: center; gap: 6px;
-    padding: 8px 16px;
-    border-radius: var(--radius);
-    border: 1px solid rgba(184,134,42,0.2);
-    color: var(--gold-light); font-size: 12px;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-  .social-btn:hover { background: rgba(184,134,42,0.1); }
-
-  /* ── FLOATING WA ── */
-  .wa-float {
-    position: fixed; bottom: 28px; right: 28px; z-index: 999;
-    width: 56px; height: 56px;
-    background: var(--whatsapp);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-    text-decoration: none;
-    transition: transform 0.2s;
-    animation: pulse-wa 2.5s infinite;
-  }
-  .wa-float:hover { transform: scale(1.1); }
-  @keyframes pulse-wa {
-    0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
-    50% { box-shadow: 0 4px 30px rgba(37,211,102,0.6); }
-  }
-
-  /* ── FOOTER ── */
-  footer { background: var(--dark); border-top: 1px solid rgba(184,134,42,0.1); padding: 48px 5% 24px; }
-
-  .footer-inner { max-width: 1200px; margin: 0 auto; }
-  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-  .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.8; margin-top: 14px; max-width: 260px; }
-  .footer-col h5 { font-size: 11px; letter-spacing: 0.12em; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
-  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-  .footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
-  .footer-col ul li a:hover { color: var(--gold-light); }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-  .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.2); }
-  .footer-bottom span { font-size: 12px; color: var(--gold); }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .reveal {
-    opacity: 0; transform: translateY(28px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-
-  /* ── TOAST ── */
-  #toast {
-    position: fixed; bottom: 100px; right: 28px; z-index: 2000;
-    background: var(--dark);
-    border: 1px solid var(--gold);
-    border-radius: var(--radius-lg);
-    padding: 14px 20px;
-    font-size: 13px; color: var(--white);
-    opacity: 0; pointer-events: none;
-    transform: translateY(10px);
-    transition: all 0.3s;
-    max-width: 280px;
-  }
-  #toast.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
-  #toast .toast-title { font-weight: 500; color: var(--gold-light); margin-bottom: 2px; }
-  #toast .toast-msg { color: rgba(255,255,255,0.55); font-size: 12px; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    .hero-inner { grid-template-columns: 1fr; }
-    .hero-visual { display: none; }
-    .services-grid { grid-template-columns: 1fr 1fr; }
-    .portfolio-grid { grid-template-columns: 1fr 1fr; }
-    .reviews-grid { grid-template-columns: 1fr 1fr; }
-    .enquiry-grid { grid-template-columns: 1fr; }
-    .whyus-grid { grid-template-columns: 1fr; }
-    .whyus-left .section-eyebrow { margin-top: 0; }
-    .process-steps { grid-template-columns: 1fr 1fr; }
-    .process-steps::before { display: none; }
-    .ba-grid { grid-template-columns: 1fr; }
-    .footer-top { grid-template-columns: 1fr 1fr; }
-  }
-
-  @media (max-width: 600px) {
-    .nav-links, .nav-cta { display: none; }
-    .nav-toggle { display: flex; }
-    .services-grid { grid-template-columns: 1fr; }
-    .portfolio-grid { grid-template-columns: 1fr; }
-    .portfolio-item.tall, .portfolio-item.wide { grid-row: span 1; grid-column: span 1; }
-    .reviews-grid { grid-template-columns: 1fr; }
-    .form-grid { grid-template-columns: 1fr; }
-    .form-full { grid-column: span 1; }
-    .process-steps { grid-template-columns: 1fr; }
-    .hero-stats { flex-wrap: wrap; gap: 20px; }
-    .footer-top { grid-template-columns: 1fr; }
-  }
-
-  /* mobile nav */
-  .mobile-menu {
-    display: none;
-    position: fixed; top: 70px; left: 0; right: 0; z-index: 999;
-    background: rgba(15,12,7,0.97);
-    border-bottom: 1px solid rgba(184,134,42,0.15);
-    padding: 20px 5%;
-    flex-direction: column; gap: 20px;
-  }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a { font-size: 15px; color: rgba(255,255,255,0.7); text-decoration: none; }
+/* ═══════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════ */
+:root {
+  --ivory:     #F7F3ED;
+  --ivory-2:   #EDE7DC;
+  --ivory-3:   #E2D8CA;
+  --charcoal:  #1C1C1C;
+  --charcoal-2:#2A2A2A;
+  --charcoal-3:#3A3A3A;
+  --gold:      #C09B5A;
+  --gold-lt:   #D4B47A;
+  --gold-dk:   #9A7A3E;
+  --gold-pale: #F5EDD8;
+  --muted:     #7A7268;
+  --muted-lt:  #A09890;
+  --white:     #FFFFFF;
+  --wa:        #25D366;
+
+  --ff-display: 'Playfair Display', Georgia, serif;
+  --ff-body:    'Jost', sans-serif;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+/* ═══════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--ff-body);
+  background: var(--ivory);
+  color: var(--charcoal);
+  overflow-x: hidden;
+  cursor: none;
+}
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+
+/* ═══════════════════════════════════════
+   CUSTOM CURSOR
+═══════════════════════════════════════ */
+#cursor-dot {
+  width: 8px; height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0; z-index: 9999;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s, background 0.2s;
+}
+#cursor-ring {
+  width: 32px; height: 32px;
+  border: 1px solid rgba(192,155,90,0.5);
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0; z-index: 9998;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.25s var(--ease-out), width 0.3s, height 0.3s, border-color 0.3s;
+}
+body:hover #cursor-ring { }
+a:hover ~ #cursor-ring, button:hover ~ #cursor-ring { width: 48px; height: 48px; }
+
+/* ═══════════════════════════════════════
+   NAV
+═══════════════════════════════════════ */
+#nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 1000;
+  padding: 0 60px;
+  height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background 0.5s, height 0.4s;
+}
+#nav.solid {
+  background: rgba(28,28,28,0.97);
+  backdrop-filter: blur(20px);
+  height: 62px;
+  border-bottom: 1px solid rgba(192,155,90,0.15);
+}
+.nav-logo-wrap { display: flex; align-items: center; gap: 12px; }
+.nav-logo-mark {
+  width: 38px; height: 38px;
+  border: 1.5px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-logo-mark span {
+  font-family: var(--ff-display);
+  font-size: 13px; color: var(--gold);
+  letter-spacing: 0.05em;
+}
+.nav-logo-text { display: flex; flex-direction: column; }
+.nav-logo-text b {
+  font-family: var(--ff-body);
+  font-size: 12px; font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.nav-logo-text small {
+  font-size: 9px; font-weight: 300;
+  color: var(--gold-lt);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+  font-size: 11px; font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.2s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute; bottom: -4px; left: 0; right: 100%;
+  height: 1px; background: var(--gold);
+  transition: right 0.3s var(--ease-out);
+}
+.nav-links a:hover { color: var(--gold-lt); }
+.nav-links a:hover::after { right: 0; }
+.nav-cta-btn {
+  font-family: var(--ff-body);
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  background: var(--gold);
+  padding: 10px 24px;
+  border: none; cursor: pointer;
+  transition: background 0.25s, transform 0.15s;
+}
+.nav-cta-btn:hover { background: var(--gold-lt); transform: translateY(-1px); }
+.nav-hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; }
+.nav-hamburger span { display: block; width: 24px; height: 1px; background: var(--white); transition: all 0.3s; }
+
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  background: var(--charcoal);
+  position: relative; overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Geometric background pattern */
+.hero-geo {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(192,155,90,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(192,155,90,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.hero-geo-line {
+  position: absolute;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(192,155,90,0.25), transparent);
+  animation: lineFloat 6s ease-in-out infinite;
+}
+.hero-geo-line:nth-child(1) { height: 40vh; top: 10vh; left: 15%; animation-delay: 0s; }
+.hero-geo-line:nth-child(2) { height: 55vh; top: 20vh; left: 35%; animation-delay: 1.5s; }
+.hero-geo-line:nth-child(3) { height: 30vh; top: 35vh; left: 55%; animation-delay: 0.8s; }
+
+@keyframes lineFloat {
+  0%,100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 0.8; transform: scaleY(1.1); }
+}
+
+/* Noise texture overlay */
+.hero-noise {
+  position: absolute; inset: 0; pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+.hero-left {
+  padding: 140px 60px 80px;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; z-index: 2;
+}
+
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 32px;
+  animation: heroFadeUp 1s 0.1s var(--ease-out) both;
+}
+.hero-eyebrow-line { width: 40px; height: 1px; background: var(--gold); }
+.hero-eyebrow-text {
+  font-size: 10px; font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.hero-eyebrow-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); opacity: 0.5; }
+
+.hero-title {
+  font-family: var(--ff-display);
+  font-size: clamp(44px, 5.5vw, 80px);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: 28px;
+  animation: heroFadeUp 1s 0.25s var(--ease-out) both;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--gold-lt);
+}
+.hero-title .title-outline {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.25);
+  color: transparent;
+  display: block;
+}
+
+.hero-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.9;
+  max-width: 400px;
+  margin-bottom: 44px;
+  animation: heroFadeUp 1s 0.4s var(--ease-out) both;
+  letter-spacing: 0.02em;
+}
+
+.hero-btns { display: flex; align-items: center; gap: 24px; animation: heroFadeUp 1s 0.55s var(--ease-out) both; }
+
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 36px;
+  background: var(--gold);
+  color: var(--charcoal);
+  font-family: var(--ff-body);
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none; cursor: pointer;
+  position: relative; overflow: hidden;
+  transition: color 0.3s;
+}
+.btn-gold::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--charcoal);
+  transform: translateX(-101%);
+  transition: transform 0.4s var(--ease-out);
+}
+.btn-gold:hover { color: var(--gold); }
+.btn-gold:hover::before { transform: translateX(0); }
+.btn-gold span { position: relative; z-index: 1; }
+.btn-gold svg { position: relative; z-index: 1; }
+
+.btn-ghost-white {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--ff-body);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.btn-ghost-white:hover { color: var(--gold-lt); border-color: var(--gold); }
+
+.hero-stats-strip {
+  display: flex; gap: 0;
+  margin-top: 64px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  animation: heroFadeUp 1s 0.7s var(--ease-out) both;
+}
+.hero-stat {
+  padding: 28px 32px 0 0;
+  margin-right: 32px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+.hero-stat:last-child { border-right: none; margin-right: 0; }
+.hero-stat-num {
+  font-family: var(--ff-display);
+  font-size: 36px; font-weight: 400;
+  color: var(--gold-lt);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.hero-stat-lbl {
+  font-size: 10px; font-weight: 400;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Hero right — magazine image collage */
+.hero-right {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+}
+.hero-img-a {
+  background: #1E1A14;
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  border-left: 1px solid rgba(192,155,90,0.08);
+}
+.hero-img-b {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(192,155,90,0.08);
+}
+.hero-img-c, .hero-img-d {
+  background: #181410;
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-img-c { border-right: 1px solid rgba(192,155,90,0.08); }
+
+.img-placeholder {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px; opacity: 0.25; pointer-events: none;
+}
+.img-placeholder svg { color: var(--gold); }
+.img-placeholder span {
+  font-size: 9px; font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.img-badge {
+  position: absolute; bottom: 20px; left: 20px;
+  background: rgba(28,28,28,0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(192,155,90,0.2);
+  padding: 8px 14px;
+}
+.img-badge span {
+  font-size: 9px; font-weight: 500;
+  color: var(--gold-lt);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-corner-tag {
+  position: absolute; top: 20px; right: 20px;
+  writing-mode: vertical-rl;
+  font-size: 9px; font-weight: 600;
+  color: rgba(255,255,255,0.1);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════
+   MARQUEE
+═══════════════════════════════════════ */
+.marquee-strip {
+  background: var(--gold);
+  padding: 14px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-inner {
+  display: inline-flex;
+  animation: marquee 22s linear infinite;
+}
+.marquee-item {
+  display: inline-flex; align-items: center; gap: 24px;
+  padding: 0 32px;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+}
+.marquee-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(28,28,28,0.3); }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ═══════════════════════════════════════
+   SECTION COMMONS
+═══════════════════════════════════════ */
+.section { padding: 110px 60px; }
+.container { max-width: 1280px; margin: 0 auto; }
+
+.sec-eyebrow {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 20px;
+}
+.sec-eyebrow-line { width: 36px; height: 1px; }
+.sec-eyebrow-line.gold { background: var(--gold); }
+.sec-eyebrow-line.dark { background: var(--charcoal-3); }
+.sec-eyebrow-text {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.sec-eyebrow-text.gold { color: var(--gold); }
+.sec-eyebrow-text.muted { color: var(--muted); }
+
+.sec-title {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  line-height: 1.1;
+}
+.sec-title.xl { font-size: clamp(36px, 4.5vw, 62px); }
+.sec-title.lg { font-size: clamp(30px, 3.5vw, 50px); }
+.sec-title.dark { color: var(--charcoal); }
+.sec-title.light { color: var(--white); }
+.sec-title em { font-style: italic; color: var(--gold); }
+
+.sec-body {
+  font-size: 14px; font-weight: 300;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+.sec-body.muted { color: var(--muted); }
+.sec-body.light { color: rgba(255,255,255,0.45); }
+
+/* ═══════════════════════════════════════
+   REVEAL ANIMATIONS
+═══════════════════════════════════════ */
+.r { opacity: 0; transform: translateY(36px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+.r.on { opacity: 1; transform: none; }
+.r-d1 { transition-delay: 0.1s; }
+.r-d2 { transition-delay: 0.2s; }
+.r-d3 { transition-delay: 0.3s; }
+.r-d4 { transition-delay: 0.4s; }
+.r-left { opacity: 0; transform: translateX(-36px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+.r-left.on { opacity: 1; transform: none; }
+.r-right { opacity: 0; transform: translateX(36px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+.r-right.on { opacity: 1; transform: none; }
+.r-scale { opacity: 0; transform: scale(0.94); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+.r-scale.on { opacity: 1; transform: scale(1); }
+
+/* ═══════════════════════════════════════
+   SERVICES
+═══════════════════════════════════════ */
+#services { background: var(--ivory); }
+
+.services-layout { display: grid; grid-template-columns: 300px 1fr; gap: 80px; align-items: start; margin-top: 70px; }
+
+.services-sidebar { position: sticky; top: 100px; }
+.services-sidebar .sec-title { margin-bottom: 20px; }
+.services-sidebar .sec-body { max-width: 240px; margin-bottom: 32px; }
+
+.sidebar-divider { width: 40px; height: 1px; background: var(--gold); margin-bottom: 32px; }
+
+.sidebar-cta-link {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: gap 0.3s;
+}
+.sidebar-cta-link:hover { gap: 16px; }
+
+.services-list { display: flex; flex-direction: column; gap: 0; }
+
+.service-row {
+  display: grid; grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: 28px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(28,28,28,0.07);
+  cursor: default;
+  transition: background 0.2s;
+  position: relative;
+}
+.service-row:first-child { border-top: 1px solid rgba(28,28,28,0.07); }
+.service-row::after {
+  content: '';
+  position: absolute; inset: 0 -60px;
+  background: var(--gold-pale);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 0;
+  pointer-events: none;
+}
+.service-row:hover::after { opacity: 1; }
+
+.service-row-num {
+  font-family: var(--ff-display);
+  font-size: 13px;
+  color: var(--muted-lt);
+  position: relative; z-index: 1;
+}
+.service-row-content { position: relative; z-index: 1; }
+.service-row-content h3 {
+  font-family: var(--ff-display);
+  font-size: 22px; font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 5px;
+  transition: color 0.2s;
+}
+.service-row:hover .service-row-content h3 { color: var(--gold-dk); }
+.service-row-content p { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; }
+
+.service-row-tags { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; position: relative; z-index: 1; }
+.srv-tag {
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dk);
+  background: var(--gold-pale);
+  padding: 3px 10px;
+  border: 1px solid rgba(192,155,90,0.2);
+}
+
+.service-row-arrow {
+  position: relative; z-index: 1;
+  width: 32px; height: 32px;
+  border: 1px solid rgba(192,155,90,0.2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity 0.3s;
+  margin-left: 12px;
+}
+.service-row:hover .service-row-arrow { opacity: 1; }
+
+/* ═══════════════════════════════════════
+   PORTFOLIO
+═══════════════════════════════════════ */
+#portfolio { background: var(--charcoal); padding-top: 110px; padding-bottom: 0; }
+
+.portfolio-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; flex-wrap: wrap; gap: 24px; }
+
+.portfolio-filters { display: flex; gap: 0; }
+.pf-btn {
+  font-family: var(--ff-body);
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: transparent;
+  color: rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: all 0.25s;
+  margin-left: -1px;
+}
+.pf-btn.on, .pf-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--charcoal); z-index: 1; }
+
+/* Magazine-style masonry grid */
+.portfolio-magazine {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 280px 200px 320px;
+  gap: 3px;
+}
+
+.pm-item {
+  background: #1A1510;
+  position: relative; overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.pm-item:nth-child(1) { grid-column: 1/6; grid-row: 1/2; }
+.pm-item:nth-child(2) { grid-column: 6/9; grid-row: 1/2; }
+.pm-item:nth-child(3) { grid-column: 9/13; grid-row: 1/3; }
+.pm-item:nth-child(4) { grid-column: 1/4; grid-row: 2/3; }
+.pm-item:nth-child(5) { grid-column: 4/6; grid-row: 2/3; }
+.pm-item:nth-child(6) { grid-column: 6/9; grid-row: 2/3; }
+.pm-item:nth-child(7) { grid-column: 1/5; grid-row: 3/4; }
+.pm-item:nth-child(8) { grid-column: 5/9; grid-row: 3/4; }
+.pm-item:nth-child(9) { grid-column: 9/13; grid-row: 3/4; }
+
+.pm-inner {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.pm-placeholder {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 8px;
+  opacity: 0.18;
+}
+.pm-placeholder svg { color: var(--gold); }
+.pm-placeholder span {
+  font-size: 8px; font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.pm-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, transparent 40%, rgba(15,12,8,0.92) 100%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 20px;
+}
+.pm-item:hover .pm-overlay { opacity: 1; }
+.pm-overlay h4 {
+  font-family: var(--ff-display);
+  font-size: 18px; font-weight: 400;
+  color: var(--white);
+  margin-bottom: 3px;
+  transform: translateY(10px);
+  transition: transform 0.4s var(--ease-out);
+}
+.pm-item:hover .pm-overlay h4 { transform: translateY(0); }
+.pm-overlay span {
+  font-size: 9px; font-weight: 500;
+  color: var(--gold-lt);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.4s 0.1s;
+}
+.pm-item:hover .pm-overlay span { opacity: 1; }
+
+/* Background color variations per item */
+.pm-item:nth-child(1) { background: #1C1710; }
+.pm-item:nth-child(2) { background: #191511; }
+.pm-item:nth-child(3) { background: #1A1209; }
+.pm-item:nth-child(4) { background: #181410; }
+.pm-item:nth-child(5) { background: #1E1A12; }
+.pm-item:nth-child(6) { background: #17130D; }
+.pm-item:nth-child(7) { background: #1B1510; }
+.pm-item:nth-child(8) { background: #1C170F; }
+.pm-item:nth-child(9) { background: #1A1209; }
+
+.portfolio-footer-strip {
+  display: flex; justify-content: center; align-items: center;
+  padding: 36px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  margin-top: 3px;
+  gap: 12px;
+}
+.portfolio-footer-strip span { font-size: 11px; color: rgba(255,255,255,0.2); letter-spacing: 0.1em; }
+
+/* ═══════════════════════════════════════
+   EDITORIAL — WHY US
+═══════════════════════════════════════ */
+#whyus { background: var(--ivory-2); }
+
+.whyus-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.whyus-left { }
+
+.feature-accordion { margin-top: 48px; }
+.fa-item {
+  border-bottom: 1px solid rgba(28,28,28,0.1);
+  cursor: pointer;
+}
+.fa-item:first-child { border-top: 1px solid rgba(28,28,28,0.1); }
+.fa-header {
+  display: flex; align-items: center; gap: 20px;
+  padding: 22px 0;
+  transition: padding 0.3s;
+}
+.fa-header:hover { padding-left: 8px; }
+.fa-num {
+  font-family: var(--ff-display);
+  font-size: 12px; color: var(--gold);
+  width: 30px; flex-shrink: 0;
+}
+.fa-title {
+  font-family: var(--ff-display);
+  font-size: 21px; font-weight: 400;
+  color: var(--charcoal);
+  flex: 1;
+  transition: color 0.2s;
+}
+.fa-item:hover .fa-title { color: var(--gold-dk); }
+.fa-icon {
+  width: 26px; height: 26px;
+  border: 1px solid rgba(192,155,90,0.25);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  transition: transform 0.3s;
+}
+.fa-item.open .fa-icon { transform: rotate(45deg); }
+.fa-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s var(--ease-in-out);
+  padding-left: 50px;
+}
+.fa-item.open .fa-body { max-height: 120px; }
+.fa-body p {
+  font-size: 13px; font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+  padding-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+
+.whyus-right { position: relative; }
+
+.whyus-image-stack { position: relative; }
+.wi-main {
+  background: var(--charcoal-2);
+  height: 460px;
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.wi-float {
+  position: absolute;
+  bottom: -30px; right: -30px;
+  width: 200px; height: 160px;
+  background: var(--gold-pale);
+  border: 1px solid rgba(192,155,90,0.25);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 24px;
+}
+.wi-float .big-num {
+  font-family: var(--ff-display);
+  font-size: 52px; font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1;
+}
+.wi-float .big-lbl {
+  font-size: 10px; font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.wi-corner {
+  position: absolute; top: -15px; left: -15px;
+  width: 80px; height: 80px;
+  border-top: 2px solid var(--gold);
+  border-left: 2px solid var(--gold);
+}
+
+/* ═══════════════════════════════════════
+   PROCESS
+═══════════════════════════════════════ */
+#process { background: var(--charcoal); }
+
+.process-header { text-align: center; margin-bottom: 80px; }
+.process-header .sec-title { margin-bottom: 16px; }
+.process-header .sec-body { margin: 0 auto; max-width: 460px; }
+
+.process-timeline { position: relative; }
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  top: 50px; left: calc(12.5% + 25px); right: calc(12.5% + 25px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,155,90,0.3) 20%, rgba(192,155,90,0.3) 80%, transparent);
+}
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+.ps-item { text-align: center; padding: 0 20px; }
+.ps-num-wrap { position: relative; display: inline-block; margin-bottom: 28px; }
+.ps-num-ring {
+  width: 52px; height: 52px;
+  border: 1px solid rgba(192,155,90,0.25);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto;
+  position: relative; z-index: 1;
+  transition: border-color 0.3s, background 0.3s;
+}
+.ps-item:hover .ps-num-ring { border-color: var(--gold); background: rgba(192,155,90,0.08); }
+.ps-num-text {
+  font-family: var(--ff-display);
+  font-size: 18px; color: var(--gold);
+}
+.ps-item h4 {
+  font-family: var(--ff-display);
+  font-size: 20px; font-weight: 400;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.ps-item p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.35); line-height: 1.8; }
+
+/* ═══════════════════════════════════════
+   TESTIMONIALS
+═══════════════════════════════════════ */
+#testimonials { background: var(--ivory); }
+
+.testimonials-layout { display: grid; grid-template-columns: 280px 1fr; gap: 80px; align-items: start; margin-top: 60px; }
+.testimonials-left { position: sticky; top: 100px; }
+.testimonials-left .sec-title { margin-bottom: 16px; }
+.testimonials-left .sec-body { margin-bottom: 28px; max-width: 220px; }
+
+.rating-badge {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--gold-pale);
+  border: 1px solid rgba(192,155,90,0.2);
+  padding: 10px 16px;
+  margin-top: 8px;
+  width: fit-content;
+}
+.rating-badge .stars { display: flex; gap: 2px; }
+.rating-badge .stars span { font-size: 12px; color: var(--gold); }
+.rating-badge .rating-num {
+  font-family: var(--ff-display);
+  font-size: 20px; color: var(--charcoal);
+}
+.rating-badge .rating-lbl { font-size: 10px; color: var(--muted); letter-spacing: 0.06em; }
+
+.reviews-col { display: flex; flex-direction: column; gap: 2px; }
+
+.review-card {
+  background: var(--white);
+  border: 1px solid rgba(28,28,28,0.06);
+  padding: 32px 36px;
+  position: relative;
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s;
+}
+.review-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.07); }
+.review-card::before {
+  content: '\201C';
+  font-family: var(--ff-display);
+  font-size: 100px; color: rgba(192,155,90,0.07);
+  position: absolute; top: 10px; right: 24px;
+  line-height: 1;
+}
+.rc-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+.rc-stars span { font-size: 11px; color: var(--gold); }
+.rc-text {
+  font-size: 14px; font-weight: 300;
+  color: var(--muted);
+  line-height: 1.85;
+  font-style: italic;
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+.rc-author { display: flex; align-items: center; gap: 12px; }
+.rc-avatar {
+  width: 38px; height: 38px;
+  background: var(--gold-pale);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-display);
+  font-size: 14px; color: var(--gold-dk);
+  flex-shrink: 0;
+}
+.rc-name { font-size: 13px; font-weight: 500; color: var(--charcoal); }
+.rc-proj { font-size: 10px; font-weight: 400; color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* ═══════════════════════════════════════
+   BEFORE / AFTER
+═══════════════════════════════════════ */
+#transform { background: var(--ivory-2); }
+
+.transform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 60px; }
+.ba-card {
+  background: var(--white);
+  border: 1px solid rgba(28,28,28,0.06);
+  overflow: hidden;
+  transition: transform 0.3s var(--ease-out);
+}
+.ba-card:hover { transform: translateY(-4px); }
+.ba-split { display: grid; grid-template-columns: 1fr 3px 1fr; height: 240px; }
+.ba-panel {
+  position: relative; overflow: hidden;
+  background: var(--ivory-3);
+  display: flex; align-items: center; justify-content: center;
+}
+.ba-panel.after { background: var(--gold-pale); }
+.ba-divider-bar { background: var(--gold); width: 3px; }
+.ba-label {
+  position: absolute; top: 12px; left: 12px;
+  font-size: 8px; font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+}
+.ba-label.before { background: rgba(28,28,28,0.65); color: rgba(255,255,255,0.6); }
+.ba-label.after { background: var(--gold); color: var(--charcoal); }
+.ba-info { padding: 20px 24px; border-top: 1px solid rgba(28,28,28,0.06); }
+.ba-info h4 { font-family: var(--ff-display); font-size: 19px; font-weight: 400; color: var(--charcoal); margin-bottom: 4px; }
+.ba-info p { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+.ba-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.ba-chip {
+  font-size: 8px; font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dk);
+  background: var(--gold-pale);
+  border: 1px solid rgba(192,155,90,0.2);
+  padding: 3px 9px;
+}
+
+/* ═══════════════════════════════════════
+   ENQUIRY + CONTACT
+═══════════════════════════════════════ */
+#contact { background: var(--charcoal); }
+
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+
+.contact-left { }
+.contact-form-wrap {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 48px;
+  margin-top: 40px;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.form-row.full { grid-template-columns: 1fr; }
+.form-field { display: flex; flex-direction: column; gap: 7px; }
+.form-field label {
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+.form-field input, .form-field select, .form-field textarea {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--white);
+  font-family: var(--ff-body);
+  font-size: 14px; font-weight: 300;
+  padding: 13px 16px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+.form-field input::placeholder, .form-field textarea::placeholder { color: rgba(255,255,255,0.2); }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+  border-color: rgba(192,155,90,0.5);
+  background: rgba(192,155,90,0.04);
+}
+.form-field select option { background: var(--charcoal-2); }
+.form-field textarea { resize: vertical; min-height: 110px; }
+
+.services-check { margin: 20px 0; }
+.services-check label.parent {
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  display: block; margin-bottom: 12px;
+}
+.check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.check-label {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 300;
+  color: rgba(255,255,255,0.45);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.check-label:hover { color: rgba(255,255,255,0.8); }
+.check-label input { accent-color: var(--gold); width: 13px; height: 13px; }
+
+.form-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
+.btn-form-submit {
+  font-family: var(--ff-body);
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  background: var(--gold);
+  border: none; cursor: pointer;
+  padding: 16px;
+  width: 100%;
+  position: relative; overflow: hidden;
+  transition: color 0.3s;
+}
+.btn-form-submit::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--charcoal);
+  transform: translateX(-101%);
+  transition: transform 0.4s var(--ease-out);
+}
+.btn-form-submit:hover { color: var(--gold); }
+.btn-form-submit:hover::before { transform: translateX(0); }
+.btn-form-submit span { position: relative; z-index: 1; }
+
+.btn-wa-form {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: var(--ff-body);
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--wa);
+  color: var(--white);
+  border: none; cursor: pointer;
+  padding: 16px;
+  width: 100%;
+  transition: opacity 0.2s;
+  text-decoration: none;
+}
+.btn-wa-form:hover { opacity: 0.9; }
+
+.contact-right { padding-top: 40px; }
+
+.contact-info-block { margin-bottom: 48px; }
+
+.ci-item {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.ci-item:first-child { border-top: 1px solid rgba(255,255,255,0.05); }
+.ci-icon {
+  width: 40px; height: 40px;
+  border: 1px solid rgba(192,155,90,0.2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.ci-label {
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+  margin-bottom: 5px;
+}
+.ci-value { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.7; }
+.ci-value a { color: var(--gold-lt); transition: color 0.2s; }
+.ci-value a:hover { color: var(--gold); }
+
+.map-block {
+  height: 220px;
+  border: 1px solid rgba(255,255,255,0.07);
+  overflow: hidden;
+  position: relative;
+}
+.map-block iframe { width: 100%; height: 100%; border: none; filter: grayscale(30%) brightness(0.8); }
+.map-overlay-tag {
+  position: absolute; top: 14px; left: 14px;
+  background: rgba(28,28,28,0.9);
+  border: 1px solid rgba(192,155,90,0.2);
+  padding: 7px 14px;
+}
+.map-overlay-tag span { font-size: 9px; font-weight: 600; color: var(--gold-lt); letter-spacing: 0.12em; text-transform: uppercase; }
+
+.social-row-dark { display: flex; gap: 8px; margin-top: 20px; }
+.soc-btn {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 9px 16px;
+  transition: all 0.2s;
+}
+.soc-btn:hover { border-color: rgba(192,155,90,0.3); color: var(--gold-lt); }
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+footer {
+  background: #111111;
+  border-top: 1px solid rgba(192,155,90,0.1);
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr 1fr;
+  gap: 60px;
+  padding: 70px 60px 50px;
+  max-width: 1280px; margin: 0 auto;
+}
+.footer-brand-desc {
+  font-size: 13px; font-weight: 300;
+  color: rgba(255,255,255,0.25);
+  line-height: 1.9;
+  max-width: 260px;
+  margin-top: 16px;
+  letter-spacing: 0.02em;
+}
+.footer-col h5 {
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul li a {
+  font-size: 12px; font-weight: 300;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover { color: var(--gold-lt); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding: 20px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  max-width: 1280px; margin: 0 auto;
+  flex-wrap: wrap; gap: 10px;
+}
+.footer-bottom p { font-size: 11px; color: rgba(255,255,255,0.15); letter-spacing: 0.04em; }
+.footer-bottom span { font-size: 10px; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; }
+
+/* ═══════════════════════════════════════
+   FLOATING WA BUTTON
+═══════════════════════════════════════ */
+.wa-fab {
+  position: fixed; bottom: 32px; right: 32px; z-index: 900;
+  width: 54px; height: 54px;
+  background: var(--wa);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.35);
+  animation: waPulse 3s ease-in-out infinite;
+  transition: transform 0.2s;
+}
+.wa-fab:hover { transform: scale(1.08); }
+@keyframes waPulse {
+  0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,0.35); }
+  50%      { box-shadow: 0 6px 36px rgba(37,211,102,0.55); }
+}
+
+/* ═══════════════════════════════════════
+   TOAST
+═══════════════════════════════════════ */
+#toast {
+  position: fixed; bottom: 100px; right: 32px; z-index: 2000;
+  background: var(--charcoal);
+  border: 1px solid var(--gold);
+  padding: 16px 22px;
+  opacity: 0; pointer-events: none;
+  transform: translateY(12px);
+  transition: all 0.35s var(--ease-out);
+  max-width: 300px;
+}
+#toast.show { opacity: 1; transform: none; pointer-events: auto; }
+#toast .t-title { font-family: var(--ff-display); font-size: 16px; color: var(--gold-lt); margin-bottom: 4px; }
+#toast .t-msg { font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 300; }
+
+/* ═══════════════════════════════════════
+   MOBILE NAV OVERLAY
+═══════════════════════════════════════ */
+.mobile-menu {
+  display: none;
+  position: fixed; inset: 0; z-index: 999;
+  background: var(--charcoal);
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 36px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: var(--ff-display);
+  font-size: 36px; font-weight: 400;
+  color: var(--white);
+  opacity: 0.7;
+  transition: opacity 0.2s, color 0.2s;
+}
+.mobile-menu a:hover { opacity: 1; color: var(--gold-lt); }
+.mobile-close {
+  position: absolute; top: 28px; right: 32px;
+  font-size: 28px; color: rgba(255,255,255,0.3);
+  cursor: pointer; background: none; border: none;
+  transition: color 0.2s;
+}
+.mobile-close:hover { color: var(--gold-lt); }
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media (max-width: 1100px) {
+  #hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 130px 40px 80px; }
+  .services-layout { grid-template-columns: 1fr; }
+  .services-sidebar { position: static; }
+  .portfolio-magazine { grid-template-columns: repeat(6, 1fr); grid-template-rows: 220px 180px; }
+  .pm-item:nth-child(1) { grid-column: 1/4; grid-row: 1; }
+  .pm-item:nth-child(2) { grid-column: 4/7; grid-row: 1; }
+  .pm-item:nth-child(3) { grid-column: 1/3; grid-row: 2; }
+  .pm-item:nth-child(4) { grid-column: 3/5; grid-row: 2; }
+  .pm-item:nth-child(5) { grid-column: 5/7; grid-row: 2; }
+  .pm-item:nth-child(6), .pm-item:nth-child(7), .pm-item:nth-child(8), .pm-item:nth-child(9) { display: none; }
+  .whyus-layout { grid-template-columns: 1fr; gap: 50px; }
+  .transform-grid { grid-template-columns: 1fr; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .testimonials-layout { grid-template-columns: 1fr; }
+  .testimonials-left { position: static; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .section { padding: 80px 24px; }
+  #nav { padding: 0 24px; }
+  .nav-links, .nav-cta-btn { display: none; }
+  .nav-hamburger { display: flex; }
+  .hero-left { padding: 120px 24px 70px; }
+  .hero-stats-strip { flex-wrap: wrap; gap: 0; }
+  .hero-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 20px 0; margin: 0; width: 50%; }
+  .portfolio-magazine { grid-template-columns: 1fr 1fr; grid-template-rows: 180px 180px; }
+  .pm-item { grid-column: span 1 !important; grid-row: span 1 !important; }
+  .pm-item:nth-child(n+5) { display: none; }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .process-timeline::before { display: none; }
+  .contact-form-wrap { padding: 28px 20px; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; padding: 48px 24px 32px; }
+  .footer-bottom { padding: 16px 24px; flex-direction: column; align-items: flex-start; }
+  .wa-fab { bottom: 24px; right: 24px; }
+  .service-row { grid-template-columns: 40px 1fr; }
+  .service-row-tags { display: none; }
+  .service-row-arrow { display: none; }
+}
 </style>
 </head>
 <body>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/917947140988?text=Hello%20MIG%20Interiors!%20I'd%20like%20to%20know%20more%20about%20your%20services." class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<!-- Custom cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/917947140988?text=Hello%20MIG%20Interiors!%20I%20would%20like%20a%20free%20consultation." class="wa-fab" target="_blank" aria-label="WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<!-- TOAST -->
+<!-- Toast -->
 <div id="toast">
-  <div class="toast-title">Enquiry Sent!</div>
-  <div class="toast-msg">We'll contact you within 24 hours.</div>
+  <div class="t-title">Enquiry Sent</div>
+  <div class="t-msg">We'll reach out within 24 hours. Thank you!</div>
 </div>
 
-<!-- MOBILE MENU -->
+<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobile()">✕</button>
   <a href="#services" onclick="closeMobile()">Services</a>
   <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
+  <a href="#whyus" onclick="closeMobile()">About</a>
   <a href="#process" onclick="closeMobile()">Process</a>
   <a href="#testimonials" onclick="closeMobile()">Reviews</a>
-  <a href="#enquiry" onclick="closeMobile()">Get Quote</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#hero" class="nav-logo">
-    <div class="nav-logo-icon">MIG</div>
+<!-- ─── NAV ─── -->
+<nav id="nav">
+  <a href="#" class="nav-logo-wrap">
+    <div class="nav-logo-mark"><span>MIG</span></div>
     <div class="nav-logo-text">
-      <span>MIG INTERIORS</span>
-      <span>Maa Interior Gallery</span>
+      <b>MIG Interiors</b>
+      <small>Maa Interior Gallery</small>
     </div>
   </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#whyus">About</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#enquiry">Contact</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#enquiry" class="nav-cta">GET QUOTE</a>
-  <div class="nav-toggle" id="navToggle" onclick="toggleMobile()">
+  <a href="#contact" class="nav-cta-btn">Get Free Quote</a>
+  <div class="nav-hamburger" onclick="toggleMobile()">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
-<!-- ── HERO ── -->
+<!-- ─── HERO ─── -->
 <section id="hero">
-  <div class="hero-pattern"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow-2"></div>
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-badge">✦ Gandhinagar's Trusted Interior Studio</div>
-      <h1 class="hero-title">
-        Designing your <em>vision,</em><br>shaping your space
-      </h1>
-      <p class="hero-desc">
-        7 years of crafting unique, functional, and visually stunning interiors for homes and offices across Gujarat. From concept to completion — we handle it all.
-      </p>
-      <div class="hero-actions">
-        <a href="#enquiry" class="btn-primary">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          Free Consultation
-        </a>
-        <a href="#portfolio" class="btn-outline">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          View Portfolio
-        </a>
+  <div class="hero-geo">
+    <div class="hero-geo-line"></div>
+    <div class="hero-geo-line"></div>
+    <div class="hero-geo-line"></div>
+  </div>
+  <div class="hero-noise"></div>
+
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span class="hero-eyebrow-text">Gandhinagar · Gujarat · Est. 2017</span>
+      <div class="hero-eyebrow-dot"></div>
+    </div>
+
+    <h1 class="hero-title">
+      Where spaces<br>
+      become <em>works</em><br>
+      <span class="title-outline">of art</span>
+    </h1>
+
+    <p class="hero-desc">
+      Bespoke interior design, turnkey projects &amp; modular furniture crafted with meticulous precision. Seven years of transforming houses into extraordinary homes across Gujarat.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#contact" class="btn-gold">
+        <span>Free Consultation</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="#portfolio" class="btn-ghost-white">
+        View Portfolio
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-stats-strip">
+      <div class="hero-stat">
+        <div class="hero-stat-num">7<sup style="font-size:0.5em;vertical-align:top;margin-top:8px">+</sup></div>
+        <div class="hero-stat-lbl">Years of Excellence</div>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="num">7+</div>
-          <div class="lbl">Years in Business</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="hero-stat">
-          <div class="num">500+</div>
-          <div class="lbl">Projects Delivered</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="hero-stat">
-          <div class="num">4.8★</div>
-          <div class="lbl">Client Rating</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="hero-stat">
-          <div class="num">100%</div>
-          <div class="lbl">Turnkey Solutions</div>
-        </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">500<sup style="font-size:0.4em;vertical-align:top;margin-top:10px">+</sup></div>
+        <div class="hero-stat-lbl">Projects Delivered</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">4.8<sub style="font-size:0.4em;color:var(--gold)">★</sub></div>
+        <div class="hero-stat-lbl">Client Rating</div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-img-grid">
-        <div class="hero-img img-tall">
-          <div class="hero-img-placeholder" style="background:#1A1408; height:100%;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(184,134,42,0.4)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span style="color:rgba(184,134,42,0.3)">Living Room</span>
-          </div>
-          <div class="img-label">Living Room</div>
-        </div>
-        <div class="hero-img">
-          <div class="hero-img-placeholder" style="background:#201809; height:100%;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(184,134,42,0.4)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span style="color:rgba(184,134,42,0.3)">Bedroom</span>
-          </div>
-          <div class="img-label">Bedroom</div>
-        </div>
-        <div class="hero-img">
-          <div class="hero-img-placeholder" style="background:#18120A; height:100%;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(184,134,42,0.4)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span style="color:rgba(184,134,42,0.3)">Kitchen</span>
-          </div>
-          <div class="img-label">Kitchen</div>
+  </div>
+
+  <!-- Magazine collage -->
+  <div class="hero-right">
+    <div class="hero-img-a">
+      <div class="img-placeholder">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Living Room</span>
+      </div>
+      <div class="img-badge"><span>Turnkey Interior</span></div>
+      <div class="hero-corner-tag">MIG Interiors 2024</div>
+    </div>
+    <div class="hero-img-b">
+      <div class="hero-img-c" style="background:#1C1610">
+        <div class="img-placeholder">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="18" rx="1"/><path d="M2 9h20"/></svg>
+          <span>Kitchen</span>
         </div>
       </div>
-      <div class="hero-card">
-        <div class="hero-card-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8862A" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <div class="hero-card-text">
-          <div class="top">Open until 7:00 PM</div>
-          <div class="bot">Mon – Sat · Kudasan, Gandhinagar</div>
+      <div class="hero-img-d" style="background:#19140C">
+        <div class="img-placeholder">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="2" width="18" height="20" rx="1"/><line x1="3" y1="8" x2="21" y2="8"/></svg>
+          <span>Bedroom</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── SERVICES ── -->
-<section id="services">
+<!-- ─── MARQUEE ─── -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <div class="marquee-item">Interior Design <div class="marquee-dot"></div></div>
+    <div class="marquee-item">Turnkey Projects <div class="marquee-dot"></div></div>
+    <div class="marquee-item">Modular Furniture <div class="marquee-dot"></div></div>
+    <div class="marquee-item">Commercial Interiors <div class="marquee-dot"></div></div>
+    <div class="marquee-item">Architectural Design <div class="marquee-dot"></div></div>
+    <div class="marquee-item">POP & False Ceiling <div class="marquee-dot"></div></div>
+    <div class="marquee-item">Curtains & Upholstery <div class="marquee-dot"></div></div>
+    <div class="marquee-item">2D & 3D Rendering <div class="marquee-dot"></div></div>
+    <div class="marquee-item">Interior Design <div class="marquee-dot"></div></div>
+    <div class="marquee-item">Turnkey Projects <div class="marquee-dot"></div></div>
+    <div class="marquee-item">Modular Furniture <div class="marquee-dot"></div></div>
+    <div class="marquee-item">Commercial Interiors <div class="marquee-dot"></div></div>
+    <div class="marquee-item">Architectural Design <div class="marquee-dot"></div></div>
+    <div class="marquee-item">POP & False Ceiling <div class="marquee-dot"></div></div>
+    <div class="marquee-item">Curtains & Upholstery <div class="marquee-dot"></div></div>
+    <div class="marquee-item">2D & 3D Rendering <div class="marquee-dot"></div></div>
+  </div>
+</div>
+
+<!-- ─── SERVICES ─── -->
+<section id="services" class="section">
   <div class="container">
-    <div class="section-eyebrow reveal">What we offer</div>
-    <h2 class="section-title reveal">Complete interior solutions,<br>under one roof</h2>
-    <p class="section-sub reveal">From architectural planning to final furnishing — we deliver every aspect of your dream space with precision and care.</p>
+    <div class="services-layout">
 
-    <div class="services-grid">
-
-      <div class="service-card reveal">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+      <div class="services-sidebar r r-left">
+        <div class="sec-eyebrow">
+          <div class="sec-eyebrow-line dark"></div>
+          <span class="sec-eyebrow-text muted">What We Offer</span>
         </div>
-        <h3>Interior Contractors</h3>
-        <p>End-to-end interior construction and finishing — civil, carpentry, electrical and more — handled by our expert team.</p>
-        <div class="tag-list"><span class="service-tag">Residential</span><span class="service-tag">Commercial</span></div>
+        <h2 class="sec-title lg dark">Complete<br><em>interior</em><br>solutions</h2>
+        <div class="sidebar-divider"></div>
+        <p class="sec-body muted" style="max-width:220px;margin-bottom:28px;">Every service your space needs, delivered by one expert team — from concept to completion.</p>
+        <a href="#contact" class="sidebar-cta-link">
+          Get a Free Quote
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
       </div>
 
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      <div class="services-list">
+        <div class="service-row r r-d1">
+          <div class="service-row-num">01</div>
+          <div class="service-row-content">
+            <h3>Interior Contractors</h3>
+            <p>End-to-end interior construction — civil, carpentry, electrical and finishes handled by our skilled team.</p>
+          </div>
+          <div class="service-row-tags">
+            <span class="srv-tag">Residential</span>
+            <span class="srv-tag">Commercial</span>
+          </div>
+          <div class="service-row-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
         </div>
-        <h3>Turnkey Contractors</h3>
-        <p>Complete project delivery — design, materials, execution and handover. You relax while we build your vision.</p>
-        <div class="tag-list"><span class="service-tag">1BHK–3BHK</span><span class="service-tag">Bungalows</span><span class="service-tag">Offices</span></div>
-      </div>
-
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <div class="service-row r r-d2">
+          <div class="service-row-num">02</div>
+          <div class="service-row-content">
+            <h3>Turnkey Contractors</h3>
+            <p>Complete project delivery from design to handover — you relax while we build your vision.</p>
+          </div>
+          <div class="service-row-tags">
+            <span class="srv-tag">1–3 BHK</span>
+            <span class="srv-tag">Bungalows</span>
+          </div>
+          <div class="service-row-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
         </div>
-        <h3>Commercial Interiors</h3>
-        <p>Offices, showrooms, retail outlets and workspaces — we design functional, impressive commercial environments.</p>
-        <div class="tag-list"><span class="service-tag">Offices</span><span class="service-tag">Showrooms</span><span class="service-tag">Retail</span></div>
-      </div>
-
-      <div class="service-card reveal reveal-delay-3">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        <div class="service-row r r-d3">
+          <div class="service-row-num">03</div>
+          <div class="service-row-content">
+            <h3>Commercial Interiors</h3>
+            <p>Offices, showrooms &amp; retail spaces — functional, impressive commercial environments.</p>
+          </div>
+          <div class="service-row-tags">
+            <span class="srv-tag">Offices</span>
+            <span class="srv-tag">Retail</span>
+          </div>
+          <div class="service-row-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
         </div>
-        <h3>Architects</h3>
-        <p>Professional architectural planning and spatial design that optimises every square foot of your property.</p>
-        <div class="tag-list"><span class="service-tag">Space Planning</span><span class="service-tag">Structural</span></div>
-      </div>
-
-      <div class="service-card reveal">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        <div class="service-row r r-d1">
+          <div class="service-row-num">04</div>
+          <div class="service-row-content">
+            <h3>Architects</h3>
+            <p>Professional architectural planning and spatial design that optimises every square foot.</p>
+          </div>
+          <div class="service-row-tags">
+            <span class="srv-tag">Space Planning</span>
+          </div>
+          <div class="service-row-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
         </div>
-        <h3>Turnkey Projects</h3>
-        <p>Full fit-out solutions for 1BHK, 2BHK, 3BHK flats and bungalows — furniture, POP, paint, curtains, everything.</p>
-        <div class="tag-list"><span class="service-tag">Furniture</span><span class="service-tag">POP</span><span class="service-tag">Paint</span><span class="service-tag">Curtains</span></div>
-      </div>
-
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+        <div class="service-row r r-d2">
+          <div class="service-row-num">05</div>
+          <div class="service-row-content">
+            <h3>Turnkey Projects</h3>
+            <p>Full fit-out for flats and bungalows — furniture, POP, paint, curtains and every last detail.</p>
+          </div>
+          <div class="service-row-tags">
+            <span class="srv-tag">All-Inclusive</span>
+          </div>
+          <div class="service-row-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
         </div>
-        <h3>Interior Designers</h3>
-        <p>Creative 2D and 3D design services — material selection, colour palettes, and complete space visualisation.</p>
-        <div class="tag-list"><span class="service-tag">2D Plans</span><span class="service-tag">3D Renders</span><span class="service-tag">Material</span></div>
-      </div>
-
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="13.5" cy="6.5" r="3.5"/><circle cx="7.5" cy="14.5" r="3.5"/><circle cx="18.5" cy="16.5" r="2.5"/></svg>
+        <div class="service-row r r-d3">
+          <div class="service-row-num">06</div>
+          <div class="service-row-content">
+            <h3>Interior Designers</h3>
+            <p>Creative 2D &amp; 3D design — material selection, colour palettes and complete visualisation.</p>
+          </div>
+          <div class="service-row-tags">
+            <span class="srv-tag">3D Renders</span>
+          </div>
+          <div class="service-row-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
         </div>
-        <h3>Interior Decorators</h3>
-        <p>Finishing touches that transform a space — curtains, upholstery, sofas, mattresses, and curated accessories.</p>
-        <div class="tag-list"><span class="service-tag">Sofas</span><span class="service-tag">Curtains</span><span class="service-tag">Mattress</span></div>
+        <div class="service-row r r-d1">
+          <div class="service-row-num">07</div>
+          <div class="service-row-content">
+            <h3>Interior Decorators</h3>
+            <p>Curtains, sofas, mattresses and curated accessories — the finishing touches that define a space.</p>
+          </div>
+          <div class="service-row-tags">
+            <span class="srv-tag">Decor</span>
+            <span class="srv-tag">Furnishing</span>
+          </div>
+          <div class="service-row-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ── PORTFOLIO ── -->
-<section id="portfolio">
+<!-- ─── PORTFOLIO ─── -->
+<section id="portfolio" class="section" style="padding-bottom:0">
   <div class="container">
-    <div class="portfolio-header">
+    <div class="portfolio-head">
       <div>
-        <div class="section-eyebrow" style="color:var(--gold)">Our work</div>
-        <h2 class="section-title light reveal">Spaces we have transformed</h2>
+        <div class="sec-eyebrow r">
+          <div class="sec-eyebrow-line gold"></div>
+          <span class="sec-eyebrow-text gold">Our Work</span>
+        </div>
+        <h2 class="sec-title xl light r r-d1">Spaces we have<br><em>transformed</em></h2>
       </div>
-      <div class="portfolio-filters reveal">
-        <button class="filter-btn active" onclick="filterPortfolio(this,'all')">All</button>
-        <button class="filter-btn" onclick="filterPortfolio(this,'residential')">Residential</button>
-        <button class="filter-btn" onclick="filterPortfolio(this,'commercial')">Commercial</button>
-        <button class="filter-btn" onclick="filterPortfolio(this,'modular')">Modular</button>
+      <div class="portfolio-filters r r-d2">
+        <button class="pf-btn on" onclick="filterPort(this,'all')">All</button>
+        <button class="pf-btn" onclick="filterPort(this,'residential')">Residential</button>
+        <button class="pf-btn" onclick="filterPort(this,'commercial')">Commercial</button>
+        <button class="pf-btn" onclick="filterPort(this,'modular')">Modular</button>
       </div>
     </div>
+  </div>
 
-    <div class="portfolio-grid" id="portfolioGrid">
+  <div class="portfolio-magazine" id="portGrid">
+    <div class="pm-item r r-scale" data-cat="residential">
+      <div class="pm-inner"><div class="pm-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Living Room</span></div></div>
+      <div class="pm-overlay"><h4>Modern Living Room</h4><span>2 BHK · Gandhinagar</span></div>
+    </div>
+    <div class="pm-item r r-scale r-d1" data-cat="modular">
+      <div class="pm-inner"><div class="pm-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="18" rx="1"/><path d="M2 9h20"/></svg><span>Kitchen</span></div></div>
+      <div class="pm-overlay"><h4>Modular Kitchen</h4><span>Bungalow · Kudasan</span></div>
+    </div>
+    <div class="pm-item r r-scale r-d2" data-cat="commercial">
+      <div class="pm-inner"><div class="pm-placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2"/></svg><span>Office</span></div></div>
+      <div class="pm-overlay"><h4>Corporate Office</h4><span>Commercial · Sector 21</span></div>
+    </div>
+    <div class="pm-item r r-scale r-d1" data-cat="residential">
+      <div class="pm-inner"><div class="pm-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="2" width="18" height="20"/></svg><span>Wardrobe</span></div></div>
+      <div class="pm-overlay"><h4>Walk-in Wardrobe</h4><span>Bungalow · Adalaj</span></div>
+    </div>
+    <div class="pm-item r r-scale r-d2" data-cat="modular">
+      <div class="pm-inner"><div class="pm-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg><span>TV Unit</span></div></div>
+      <div class="pm-overlay"><h4>Modular TV Unit</h4><span>3 BHK · Infocity</span></div>
+    </div>
+    <div class="pm-item r r-scale r-d3" data-cat="commercial">
+      <div class="pm-inner"><div class="pm-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Showroom</span></div></div>
+      <div class="pm-overlay"><h4>Retail Showroom</h4><span>Commercial · Gandhinagar</span></div>
+    </div>
+    <div class="pm-item r r-scale" data-cat="residential">
+      <div class="pm-inner"><div class="pm-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="4" width="20" height="16" rx="2"/></svg><span>Bedroom</span></div></div>
+      <div class="pm-overlay"><h4>Master Bedroom</h4><span>3 BHK · Chandkheda</span></div>
+    </div>
+    <div class="pm-item r r-scale r-d1" data-cat="modular">
+      <div class="pm-inner"><div class="pm-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 3h18v4H3z"/><path d="M3 10h18v4H3z"/><path d="M3 17h18v4H3z"/></svg><span>Shelving</span></div></div>
+      <div class="pm-overlay"><h4>Study Shelving</h4><span>Home Office · Sector 5</span></div>
+    </div>
+    <div class="pm-item r r-scale r-d2" data-cat="commercial">
+      <div class="pm-inner"><div class="pm-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span>Cabin</span></div></div>
+      <div class="pm-overlay"><h4>Executive Cabin</h4><span>Office · Gandhinagar</span></div>
+    </div>
+  </div>
 
-      <div class="portfolio-item tall" data-cat="residential">
-        <div class="portfolio-placeholder" style="background:#1C1508">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(184,134,42,0.35)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          <span>Living Room</span>
+  <div class="portfolio-footer-strip">
+    <span>Replace placeholders with your actual project photographs</span>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+  </div>
+</section>
+
+<!-- ─── WHY US ─── -->
+<section id="whyus" class="section">
+  <div class="container">
+    <div class="whyus-layout">
+      <div class="whyus-left">
+        <div class="sec-eyebrow r">
+          <div class="sec-eyebrow-line dark"></div>
+          <span class="sec-eyebrow-text muted">Why Choose MIG</span>
         </div>
-        <div class="portfolio-overlay">
-          <h4>Modern Living Room</h4>
-          <span>2 BHK · Gandhinagar</span>
+        <h2 class="sec-title xl dark r r-d1">Your home,<br>our <em>commitment</em></h2>
+
+        <div class="feature-accordion r r-d2">
+          <div class="fa-item open">
+            <div class="fa-header" onclick="toggleFA(this)">
+              <span class="fa-num">01</span>
+              <span class="fa-title">One-stop solution</span>
+              <div class="fa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+            </div>
+            <div class="fa-body"><p>Furniture, POP, paint, curtains, sofa, mattress — everything under one roof. One vendor, one point of contact, zero confusion.</p></div>
+          </div>
+          <div class="fa-item">
+            <div class="fa-header" onclick="toggleFA(this)">
+              <span class="fa-num">02</span>
+              <span class="fa-title">Bespoke manufacturing</span>
+              <div class="fa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+            </div>
+            <div class="fa-body"><p>Custom-built furniture crafted to your exact dimensions, style, and budget. Every piece is made to measure — not off a catalogue.</p></div>
+          </div>
+          <div class="fa-item">
+            <div class="fa-header" onclick="toggleFA(this)">
+              <span class="fa-num">03</span>
+              <span class="fa-title">Transparent pricing</span>
+              <div class="fa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+            </div>
+            <div class="fa-body"><p>Detailed quotations with no hidden costs. You know exactly where every rupee goes before work begins. No surprises.</p></div>
+          </div>
+          <div class="fa-item">
+            <div class="fa-header" onclick="toggleFA(this)">
+              <span class="fa-num">04</span>
+              <span class="fa-title">End-to-end project management</span>
+              <div class="fa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+            </div>
+            <div class="fa-body"><p>Dedicated project manager from design to handover. Regular WhatsApp updates. You stay informed without lifting a finger.</p></div>
+          </div>
+          <div class="fa-item">
+            <div class="fa-header" onclick="toggleFA(this)">
+              <span class="fa-num">05</span>
+              <span class="fa-title">7 years of proven expertise</span>
+              <div class="fa-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+            </div>
+            <div class="fa-body"><p>Over 500 completed projects across Gandhinagar and Gujarat since 2017. Our track record speaks for itself.</p></div>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-item" data-cat="modular">
-        <div class="portfolio-placeholder" style="background:#20160A">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(184,134,42,0.35)" stroke-width="1.5"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/></svg>
-          <span>Modular Kitchen</span>
-        </div>
-        <div class="portfolio-overlay">
-          <h4>Modular Kitchen</h4>
-          <span>Bungalow · Kudasan</span>
-        </div>
-      </div>
-
-      <div class="portfolio-item" data-cat="commercial">
-        <div class="portfolio-placeholder" style="background:#181208">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(184,134,42,0.35)" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>
-          <span>Office Interior</span>
-        </div>
-        <div class="portfolio-overlay">
-          <h4>Corporate Office</h4>
-          <span>Commercial · Sector 21</span>
+      <div class="whyus-right r r-right">
+        <div class="whyus-image-stack">
+          <div class="wi-corner"></div>
+          <div class="wi-main">
+            <div class="img-placeholder" style="opacity:0.15">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              <span style="font-size:9px;color:var(--gold);letter-spacing:0.15em;font-weight:600;">Add Project Photo</span>
+            </div>
+          </div>
+          <div class="wi-float">
+            <div class="big-num">500<sup style="font-size:0.4em;vertical-align:top">+</sup></div>
+            <div class="big-lbl">Projects Completed</div>
+          </div>
         </div>
       </div>
-
-      <div class="portfolio-item wide" data-cat="residential">
-        <div class="portfolio-placeholder" style="background:#1E1509">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(184,134,42,0.35)" stroke-width="1.5"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-          <span>Master Bedroom</span>
-        </div>
-        <div class="portfolio-overlay">
-          <h4>Luxury Master Bedroom</h4>
-          <span>3 BHK · Infocity</span>
-        </div>
-      </div>
-
-      <div class="portfolio-item" data-cat="modular">
-        <div class="portfolio-placeholder" style="background:#1A1207">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(184,134,42,0.35)" stroke-width="1.5"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-          <span>Wardrobe</span>
-        </div>
-        <div class="portfolio-overlay">
-          <h4>Sliding Wardrobe</h4>
-          <span>Modular · Sector 5</span>
-        </div>
-      </div>
-
-      <div class="portfolio-item" data-cat="commercial">
-        <div class="portfolio-placeholder" style="background:#170F06">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(184,134,42,0.35)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          <span>Showroom</span>
-        </div>
-        <div class="portfolio-overlay">
-          <h4>Retail Showroom</h4>
-          <span>Commercial · Adalaj</span>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ── BEFORE / AFTER ── -->
-<section id="beforeafter">
+<!-- ─── PROCESS ─── -->
+<section id="process" class="section">
   <div class="container">
-    <div class="section-eyebrow reveal">Transformations</div>
-    <h2 class="section-title reveal">Before &amp; after</h2>
-    <p class="section-sub reveal">See the remarkable difference our team delivers — from bare shells to beautifully finished spaces.</p>
-
-    <div class="ba-grid">
-      <div class="ba-card reveal">
-        <div class="ba-images">
-          <div class="ba-side" style="border-right:2px solid var(--gold);">
-            <div class="ba-placeholder" style="background:#E8E0D0">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-              <span>Empty Space</span>
-            </div>
-            <div class="ba-side-label before">Before</div>
+    <div class="process-header">
+      <div class="sec-eyebrow r" style="justify-content:center">
+        <div class="sec-eyebrow-line gold"></div>
+        <span class="sec-eyebrow-text gold">How It Works</span>
+        <div class="sec-eyebrow-line gold"></div>
+      </div>
+      <h2 class="sec-title xl light r r-d1">Our process,<br><em>simplified</em></h2>
+      <p class="sec-body light r r-d2" style="max-width:400px;margin:0 auto">No guesswork, no delays — a clear and transparent path from first conversation to final handover.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-steps">
+        <div class="ps-item r">
+          <div class="ps-num-wrap">
+            <div class="ps-num-ring"><span class="ps-num-text">I</span></div>
           </div>
-          <div class="ba-side">
-            <div class="ba-placeholder" style="background:#D4A84B22">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(184,134,42,0.4)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-              <span style="color:rgba(184,134,42,0.5)">After MIG</span>
+          <h4>Consultation</h4>
+          <p>We visit your space, understand your vision, style preferences and budget — completely free.</p>
+        </div>
+        <div class="ps-item r r-d1">
+          <div class="ps-num-wrap">
+            <div class="ps-num-ring"><span class="ps-num-text">II</span></div>
+          </div>
+          <h4>Design</h4>
+          <p>Detailed 2D plans and photorealistic 3D renders. Material boards, colour palettes and full quotation.</p>
+        </div>
+        <div class="ps-item r r-d2">
+          <div class="ps-num-wrap">
+            <div class="ps-num-ring"><span class="ps-num-text">III</span></div>
+          </div>
+          <h4>Execution</h4>
+          <p>Our expert team handles all works — civil, carpentry, painting, electrical and furnishing — on schedule.</p>
+        </div>
+        <div class="ps-item r r-d3">
+          <div class="ps-num-wrap">
+            <div class="ps-num-ring"><span class="ps-num-text">IV</span></div>
+          </div>
+          <h4>Handover</h4>
+          <p>Final inspection, quality walkthrough and post-project support. Your dream space, delivered.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <div class="testimonials-layout">
+      <div class="testimonials-left">
+        <div class="sec-eyebrow r">
+          <div class="sec-eyebrow-line dark"></div>
+          <span class="sec-eyebrow-text muted">Client Stories</span>
+        </div>
+        <h2 class="sec-title lg dark r r-d1">Words from<br>our <em>clients</em></h2>
+        <p class="sec-body muted r r-d2" style="margin-bottom:20px">Real experiences from families and businesses we've worked with across Gujarat.</p>
+        <div class="rating-badge r r-d3">
+          <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <div class="rating-num">4.8</div>
+          <div class="rating-lbl">Average Rating<br>from 200+ clients</div>
+        </div>
+      </div>
+
+      <div class="reviews-col">
+        <div class="review-card r">
+          <div class="rc-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="rc-text">"MIG Interior transformed our 3BHK flat completely. The quality of furniture and finishing is outstanding. They completed the entire project in 50 days as promised. Highly recommended to anyone looking for a reliable interior team."</p>
+          <div class="rc-author">
+            <div class="rc-avatar">RB</div>
+            <div>
+              <div class="rc-name">Rajesh Bhatt</div>
+              <div class="rc-proj">3 BHK Turnkey · Gandhinagar</div>
             </div>
-            <div class="ba-side-label after">After</div>
+          </div>
+        </div>
+        <div class="review-card r r-d1">
+          <div class="rc-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="rc-text">"The modular kitchen they designed for our bungalow is absolutely beautiful. Very professional team, excellent communication. The 3D design helped us visualise the final result perfectly before execution began."</p>
+          <div class="rc-author">
+            <div class="rc-avatar">PS</div>
+            <div>
+              <div class="rc-name">Priya Shah</div>
+              <div class="rc-proj">Bungalow Kitchen · Kudasan</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card r r-d2">
+          <div class="rc-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="rc-text">"We hired MIG for our office interior in Sector 21. The space looks incredibly professional and our clients always compliment it. Great value for money and completely transparent pricing."</p>
+          <div class="rc-author">
+            <div class="rc-avatar">MK</div>
+            <div>
+              <div class="rc-name">Mihir Kothari</div>
+              <div class="rc-proj">Office Interior · Sector 21</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card r r-d1">
+          <div class="rc-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="rc-text">"I gave them my keys and they gave me back a fully done 2BHK in 40 days. From POP to curtains, everything was handled. WhatsApp updates throughout kept me completely in the loop. 10/10!"</p>
+          <div class="rc-author">
+            <div class="rc-avatar">NK</div>
+            <div>
+              <div class="rc-name">Nirav Kamdar</div>
+              <div class="rc-proj">2 BHK Turnkey · Adalaj</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BEFORE / AFTER ─── -->
+<section id="transform" class="section" style="padding-top:0">
+  <div class="container">
+    <div class="sec-eyebrow r">
+      <div class="sec-eyebrow-line dark"></div>
+      <span class="sec-eyebrow-text muted">Before &amp; After</span>
+    </div>
+    <h2 class="sec-title lg dark r r-d1">See the <em>transformation</em></h2>
+    <div class="transform-grid">
+      <div class="ba-card r">
+        <div class="ba-split">
+          <div class="ba-panel">
+            <div class="img-placeholder" style="opacity:0.2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+            <div class="ba-label before">Before</div>
+          </div>
+          <div class="ba-divider-bar"></div>
+          <div class="ba-panel after">
+            <div class="img-placeholder" style="opacity:0.25"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dk)" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+            <div class="ba-label after">After</div>
           </div>
         </div>
         <div class="ba-info">
           <h4>2 BHK Living Room — Gandhinagar</h4>
-          <p>Complete turnkey transformation in 45 days</p>
-          <div class="ba-tags">
-            <span class="service-tag">Turnkey</span>
-            <span class="service-tag">POP Ceiling</span>
-            <span class="service-tag">Modular TV Unit</span>
-            <span class="service-tag">Sofa</span>
+          <p>Complete turnkey transformation delivered in 45 days</p>
+          <div class="ba-chips">
+            <span class="ba-chip">Turnkey</span><span class="ba-chip">POP Ceiling</span><span class="ba-chip">TV Unit</span><span class="ba-chip">Sofa</span>
           </div>
         </div>
       </div>
-
-      <div class="ba-card reveal reveal-delay-1">
-        <div class="ba-images">
-          <div class="ba-side" style="border-right:2px solid var(--gold);">
-            <div class="ba-placeholder" style="background:#DDD8CF">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-              <span>Raw Room</span>
-            </div>
-            <div class="ba-side-label before">Before</div>
+      <div class="ba-card r r-d1">
+        <div class="ba-split">
+          <div class="ba-panel">
+            <div class="img-placeholder" style="opacity:0.2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+            <div class="ba-label before">Before</div>
           </div>
-          <div class="ba-side">
-            <div class="ba-placeholder" style="background:#B8862A18">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(184,134,42,0.4)" stroke-width="1.5"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/></svg>
-              <span style="color:rgba(184,134,42,0.5)">After MIG</span>
-            </div>
-            <div class="ba-side-label after">After</div>
+          <div class="ba-divider-bar"></div>
+          <div class="ba-panel after">
+            <div class="img-placeholder" style="opacity:0.25"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dk)" stroke-width="1"><rect x="2" y="3" width="20" height="18" rx="1"/><path d="M2 9h20"/></svg></div>
+            <div class="ba-label after">After</div>
           </div>
         </div>
         <div class="ba-info">
           <h4>Modular Kitchen — Kudasan Bungalow</h4>
-          <p>Premium modular kitchen with island counter</p>
-          <div class="ba-tags">
-            <span class="service-tag">Modular</span>
-            <span class="service-tag">Island Counter</span>
-            <span class="service-tag">Granite</span>
+          <p>Premium modular kitchen with island counter and granite</p>
+          <div class="ba-chips">
+            <span class="ba-chip">Modular</span><span class="ba-chip">Island</span><span class="ba-chip">Granite</span><span class="ba-chip">Appliances</span>
           </div>
         </div>
       </div>
@@ -1031,212 +1780,37 @@
   </div>
 </section>
 
-<!-- ── WHY US ── -->
-<section id="whyus" style="padding-top:90px; padding-bottom:90px;">
+<!-- ─── CONTACT ─── -->
+<section id="contact" class="section">
   <div class="container">
-    <div class="whyus-grid">
-      <div class="whyus-right reveal">
-        <div class="metric-card" style="background:var(--dark-3);">
-          <div class="metric-num">7+</div>
-          <div class="metric-label">Years of excellence in Gujarat</div>
-          <div class="metric-sub">Est. 2017 · Kudasan, Gandhinagar</div>
+    <div class="contact-layout">
+      <div class="contact-left">
+        <div class="sec-eyebrow r">
+          <div class="sec-eyebrow-line gold"></div>
+          <span class="sec-eyebrow-text gold">Get In Touch</span>
         </div>
-        <div class="metric-card">
-          <div class="metric-num">500+</div>
-          <div class="metric-label">Projects delivered</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-num">4.8★</div>
-          <div class="metric-label">Avg. client rating</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-num">7</div>
-          <div class="metric-label">Service categories</div>
-        </div>
-      </div>
+        <h2 class="sec-title xl light r r-d1">Let's build your<br><em>dream space</em></h2>
+        <p class="sec-body light r r-d2" style="max-width:380px">Fill the form and our team will reach out within 24 hours with a free consultation and detailed quote.</p>
 
-      <div class="whyus-left">
-        <div class="section-eyebrow reveal">Why choose us</div>
-        <h2 class="section-title light reveal">Your home, our commitment</h2>
-        <div class="features-list">
-          <div class="feature-item reveal">
-            <div class="feature-num">01</div>
-            <div>
-              <h4>One-stop solution</h4>
-              <p>Furniture, POP, paint, curtains, sofa, mattress — everything under one roof, saving you time and hassle.</p>
-            </div>
-          </div>
-          <div class="feature-item reveal reveal-delay-1">
-            <div class="feature-num">02</div>
-            <div>
-              <h4>Bespoke manufacturing</h4>
-              <p>Custom-built furniture crafted to your exact dimensions, style, and budget. No compromise on quality.</p>
-            </div>
-          </div>
-          <div class="feature-item reveal reveal-delay-2">
-            <div class="feature-num">03</div>
-            <div>
-              <h4>Transparent pricing</h4>
-              <p>Clear quotes upfront — no hidden costs, no surprises. We believe in honest, long-term relationships.</p>
-            </div>
-          </div>
-          <div class="feature-item reveal reveal-delay-3">
-            <div class="feature-num">04</div>
-            <div>
-              <h4>End-to-end project management</h4>
-              <p>Dedicated project manager oversees every detail from design to final handover. You stay stress-free.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── PROCESS ── -->
-<section id="process">
-  <div class="container">
-    <div style="text-align:center; margin-bottom:10px;">
-      <div class="section-eyebrow reveal" style="justify-content:center;">How it works</div>
-      <h2 class="section-title reveal" style="text-align:center;">Our simple 4-step process</h2>
-      <p class="section-sub reveal" style="text-align:center; margin:0 auto 0;">No guesswork, no delays — just a clear path from dream to done.</p>
-    </div>
-    <div class="process-steps">
-      <div class="process-step reveal">
-        <div class="step-num">1</div>
-        <h4>Consultation</h4>
-        <p>We listen to your requirements, understand your style, and assess your space — free of charge.</p>
-      </div>
-      <div class="process-step reveal reveal-delay-1">
-        <div class="step-num">2</div>
-        <h4>Design & Planning</h4>
-        <p>2D/3D visualisation, material selection, and detailed quotation — so you know exactly what to expect.</p>
-      </div>
-      <div class="process-step reveal reveal-delay-2">
-        <div class="step-num">3</div>
-        <h4>Execution</h4>
-        <p>Our skilled team handles all civil, carpentry, painting, electrical and furnishing work on schedule.</p>
-      </div>
-      <div class="process-step reveal reveal-delay-3">
-        <div class="step-num">4</div>
-        <h4>Handover</h4>
-        <p>Final walkthrough, quality check, and post-project support. Your dream space, delivered.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── TESTIMONIALS ── -->
-<section id="testimonials">
-  <div class="container">
-    <div class="section-eyebrow reveal">Client reviews</div>
-    <h2 class="section-title light reveal">What our clients say</h2>
-    <p class="section-sub light reveal">Real words from real families and businesses we've worked with across Gandhinagar and Gujarat.</p>
-
-    <div class="reviews-grid">
-      <div class="review-card reveal">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="review-text">"MIG Interior transformed our 3BHK flat completely. The quality of furniture and finishing is outstanding. They completed the entire project in 50 days as promised. Highly recommended!"</p>
-        <div class="review-author">
-          <div class="review-avatar">RB</div>
-          <div>
-            <div class="review-name">Rajesh Bhatt</div>
-            <div class="review-type">3 BHK Turnkey · Gandhinagar</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card reveal reveal-delay-1">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="review-text">"The modular kitchen they designed for our bungalow is absolutely beautiful. Very professional team, excellent communication throughout. The 3D design really helped us visualise the final result."</p>
-        <div class="review-author">
-          <div class="review-avatar">PS</div>
-          <div>
-            <div class="review-name">Priya Shah</div>
-            <div class="review-type">Bungalow Kitchen · Kudasan</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card reveal reveal-delay-2">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="review-text">"We hired MIG for our office interior in Sector 21. The space looks very professional and our clients always compliment it. Great value for money, transparent pricing. Very satisfied."</p>
-        <div class="review-author">
-          <div class="review-avatar">MK</div>
-          <div>
-            <div class="review-name">Mihir Kothari</div>
-            <div class="review-type">Office Interior · Sector 21</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card reveal">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="review-text">"Excellent craftsmanship! The custom wardrobe and TV unit they made for our bedroom is perfect. Attention to detail is superb. Will definitely use their services again."</p>
-        <div class="review-author">
-          <div class="review-avatar">AP</div>
-          <div>
-            <div class="review-name">Anita Patel</div>
-            <div class="review-type">Modular Furniture · Infocity</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card reveal reveal-delay-1">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="review-text">"I gave them my keys and they gave me back a fully done 2BHK in 40 days. From POP to curtains, everything was handled. The WhatsApp updates kept me in the loop throughout. 10/10!"</p>
-        <div class="review-author">
-          <div class="review-avatar">NK</div>
-          <div>
-            <div class="review-name">Nirav Kamdar</div>
-            <div class="review-type">2 BHK Turnkey · Adalaj</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card reveal reveal-delay-2">
-        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="review-text">"The team is very skilled and dedicated. They completely understood our vision for the showroom and delivered beyond expectations. The whole process was smooth and professional."</p>
-        <div class="review-author">
-          <div class="review-avatar">DM</div>
-          <div>
-            <div class="review-name">Deepak Mehta</div>
-            <div class="review-type">Retail Showroom · Gandhinagar</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── ENQUIRY ── -->
-<section id="enquiry">
-  <div class="container">
-    <div class="enquiry-grid">
-      <div>
-        <div class="section-eyebrow reveal">Get in touch</div>
-        <h2 class="section-title reveal">Let's build your dream space</h2>
-        <p class="section-sub reveal" style="margin-bottom:32px;">Fill in the form and our team will reach out within 24 hours with a free consultation and quote.</p>
-
-        <div class="form-card reveal">
-          <h3>Send an Enquiry</h3>
-          <p class="form-sub">Free consultation · No obligations</p>
-          <div class="form-grid" id="enquiryForm">
-            <div class="form-group">
+        <div class="contact-form-wrap r r-d3">
+          <div class="form-row">
+            <div class="form-field">
               <label>Your Name *</label>
-              <input type="text" id="fname" placeholder="Ramesh Patel" />
+              <input type="text" id="fn" placeholder="Ramesh Patel">
             </div>
-            <div class="form-group">
+            <div class="form-field">
               <label>Mobile Number *</label>
-              <input type="tel" id="fphone" placeholder="9876543210" />
+              <input type="tel" id="fp" placeholder="9876543210">
             </div>
-            <div class="form-group">
+          </div>
+          <div class="form-row">
+            <div class="form-field">
               <label>Email Address</label>
-              <input type="email" id="femail" placeholder="you@example.com" />
+              <input type="email" id="fe" placeholder="you@email.com">
             </div>
-            <div class="form-group">
+            <div class="form-field">
               <label>Property Type</label>
-              <select id="fprop">
+              <select id="ft">
                 <option value="">Select type</option>
                 <option>1 BHK</option>
                 <option>2 BHK</option>
@@ -1246,98 +1820,93 @@
                 <option>Showroom / Retail</option>
               </select>
             </div>
-            <div class="form-group form-full">
-              <label>Services Required</label>
-              <div class="service-checkboxes">
-                <label class="check-item"><input type="checkbox" value="Interior Contractors"><span>Interior Contractors</span></label>
-                <label class="check-item"><input type="checkbox" value="Turnkey Project"><span>Turnkey Project</span></label>
-                <label class="check-item"><input type="checkbox" value="Commercial Interior"><span>Commercial Interior</span></label>
-                <label class="check-item"><input type="checkbox" value="Architects"><span>Architects</span></label>
-                <label class="check-item"><input type="checkbox" value="Interior Design"><span>Interior Design</span></label>
-                <label class="check-item"><input type="checkbox" value="Interior Decoration"><span>Interior Decoration</span></label>
-              </div>
+          </div>
+          <div class="services-check">
+            <label class="parent">Services Required</label>
+            <div class="check-grid">
+              <label class="check-label"><input type="checkbox" value="Interior Contractors"> Interior Contractors</label>
+              <label class="check-label"><input type="checkbox" value="Turnkey Project"> Turnkey Project</label>
+              <label class="check-label"><input type="checkbox" value="Commercial Interior"> Commercial Interior</label>
+              <label class="check-label"><input type="checkbox" value="Architects"> Architects</label>
+              <label class="check-label"><input type="checkbox" value="Interior Design"> Interior Design</label>
+              <label class="check-label"><input type="checkbox" value="Interior Decoration"> Interior Decoration</label>
             </div>
-            <div class="form-group form-full">
-              <label>Tell us about your project</label>
-              <textarea id="fmsg" placeholder="Describe your space, budget range, timeline, or any special requirements..."></textarea>
+          </div>
+          <div class="form-row full">
+            <div class="form-field">
+              <label>Tell Us About Your Project</label>
+              <textarea id="fm" placeholder="Describe your space, requirements, timeline or budget..."></textarea>
             </div>
           </div>
           <div class="form-actions">
-            <button class="btn-submit" onclick="submitForm()">Send Enquiry →</button>
-            <a href="https://wa.me/917947140988?text=Hello%20MIG%20Interiors!%20I'd%20like%20a%20free%20consultation." class="btn-wa" target="_blank">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <button class="btn-form-submit" onclick="submitEnquiry()"><span>Send Enquiry →</span></button>
+            <a href="https://wa.me/917947140988?text=Hello%20MIG%20Interiors!%20I%20need%20a%20free%20consultation." class="btn-wa-form" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Chat on WhatsApp
             </a>
           </div>
         </div>
       </div>
 
-      <div class="contact-panel" id="contact">
-        <div class="section-eyebrow reveal" style="margin-top:54px;">Find us</div>
-        <h2 class="section-title reveal" style="font-size:36px;">Visit our studio</h2>
+      <div class="contact-right r r-right">
+        <div style="margin-bottom:32px;">
+          <div class="sec-eyebrow">
+            <div class="sec-eyebrow-line gold"></div>
+            <span class="sec-eyebrow-text gold">Visit Our Studio</span>
+          </div>
+        </div>
 
-        <div class="contact-card reveal">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
+        <div class="contact-info-block">
+          <div class="ci-item">
+            <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <div>
-              <div class="contact-label">Address</div>
-              <div class="contact-value">Shop No. 04, Shrifal Heights,<br>Opposite Sardar Petrol Pump,<br>Kudasan, Gandhinagar – 382421, Gujarat</div>
+              <div class="ci-label">Address</div>
+              <div class="ci-value">Shop No. 04, Shrifal Heights,<br>Opposite Sardar Petrol Pump,<br>Kudasan, Gandhinagar – 382421, Gujarat</div>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.72a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
+          <div class="ci-item">
+            <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.72a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
             <div>
-              <div class="contact-label">Phone</div>
-              <div class="contact-value">
+              <div class="ci-label">Phone</div>
+              <div class="ci-value">
                 <a href="tel:07947140988">079 4714 0988</a><br>
-                <a href="tel:8238296737">82382 96737</a> &nbsp;|&nbsp; <a href="tel:9998938913">99989 38913</a>
+                <a href="tel:8238296737">82382 96737</a> &nbsp;/&nbsp; <a href="tel:9998938913">99989 38913</a>
               </div>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
+          <div class="ci-item">
+            <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
             <div>
-              <div class="contact-label">Business Hours</div>
-              <div class="contact-value">Monday – Saturday: 9:00 AM – 7:00 PM<br>Sunday: Closed</div>
+              <div class="ci-label">Hours</div>
+              <div class="ci-value">Monday – Saturday: 9:00 AM – 7:00 PM<br><span style="color:rgba(255,255,255,0.25)">Sunday: Closed</span></div>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </div>
+          <div class="ci-item">
+            <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
             <div>
-              <div class="contact-label">Instagram</div>
-              <div class="contact-value"><a href="https://instagram.com/m.ig_interior1016" target="_blank">@M.IG_INTERIOR1016</a></div>
+              <div class="ci-label">Instagram</div>
+              <div class="ci-value"><a href="https://instagram.com/m.ig_interior1016" target="_blank">@M.IG_INTERIOR1016</a></div>
             </div>
           </div>
         </div>
 
-        <div class="map-embed reveal">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.527!2d72.6486!3d23.1875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDExJzE1LjAiTiA3MsKwMzgnNTMuMCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="MIG Interiors location map">
-          </iframe>
+        <div class="map-block">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.8!2d72.6486!3d23.1875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDExJzE1LjAiTiA3MsKwMzgnNTMuMCJF!5e0!3m2!1sen!2sin!4v1700000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="MIG Interiors location"></iframe>
+          <div class="map-overlay-tag"><span>Kudasan, Gandhinagar</span></div>
         </div>
 
-        <div class="social-row reveal">
-          <a href="https://wa.me/917947140988" class="social-btn" target="_blank">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <div class="social-row-dark">
+          <a href="https://wa.me/917947140988" class="soc-btn" target="_blank">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             WhatsApp
           </a>
-          <a href="https://instagram.com/m.ig_interior1016" class="social-btn" target="_blank">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <a href="https://instagram.com/m.ig_interior1016" class="soc-btn" target="_blank">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             Instagram
           </a>
-          <a href="mailto:miginterior@gmail.com" class="social-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Email Us
+          <a href="mailto:miginterior@gmail.com" class="soc-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
           </a>
         </div>
       </div>
@@ -1345,118 +1914,126 @@
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
+<!-- ─── FOOTER ─── -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="nav-logo">
-          <div class="nav-logo-icon">MIG</div>
-          <div class="nav-logo-text">
-            <span>MIG INTERIORS</span>
-            <span>Maa Interior Gallery</span>
-          </div>
+  <div class="footer-top">
+    <div>
+      <div class="nav-logo-wrap">
+        <div class="nav-logo-mark"><span>MIG</span></div>
+        <div class="nav-logo-text">
+          <b>MIG Interiors</b>
+          <small>Maa Interior Gallery</small>
         </div>
-        <p>Designing your vision, shaping your space. 7 years of crafting beautiful, functional interiors across Gandhinagar and Gujarat.</p>
       </div>
-      <div class="footer-col">
-        <h5>Services</h5>
-        <ul>
-          <li><a href="#services">Interior Contractors</a></li>
-          <li><a href="#services">Turnkey Contractors</a></li>
-          <li><a href="#services">Commercial Interiors</a></li>
-          <li><a href="#services">Architects</a></li>
-          <li><a href="#services">Interior Designers</a></li>
-          <li><a href="#services">Interior Decorators</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#enquiry">Get Quote</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="tel:07947140988">079 4714 0988</a></li>
-          <li><a href="tel:8238296737">82382 96737</a></li>
-          <li><a href="tel:9998938913">99989 38913</a></li>
-          <li><a href="https://instagram.com/m.ig_interior1016" target="_blank">@M.IG_INTERIOR1016</a></li>
-          <li><a href="https://wa.me/917947140988" target="_blank">WhatsApp Us</a></li>
-        </ul>
-      </div>
+      <p class="footer-brand-desc">Designing your vision, shaping your space. Seven years of crafting extraordinary interiors across Gandhinagar and Gujarat.</p>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 Maa Interior Gallery · Shop No. 04, Shrifal Heights, Kudasan, Gandhinagar – 382421, Gujarat</p>
-      <span>Your Home Our Decoration ✦</span>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#services">Interior Contractors</a></li>
+        <li><a href="#services">Turnkey Contractors</a></li>
+        <li><a href="#services">Commercial Interiors</a></li>
+        <li><a href="#services">Architects</a></li>
+        <li><a href="#services">Interior Designers</a></li>
+        <li><a href="#services">Interior Decorators</a></li>
+      </ul>
     </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#whyus">About Us</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:07947140988">079 4714 0988</a></li>
+        <li><a href="tel:8238296737">82382 96737</a></li>
+        <li><a href="tel:9998938913">99989 38913</a></li>
+        <li><a href="https://instagram.com/m.ig_interior1016" target="_blank">@M.IG_INTERIOR1016</a></li>
+        <li><a href="https://wa.me/917947140988" target="_blank">WhatsApp Us</a></li>
+        <li><a href="https://maps.google.com" target="_blank">Get Directions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Maa Interior Gallery · Shop No. 04, Shrifal Heights, Kudasan, Gandhinagar – 382421, Gujarat</p>
+    <span>Your Home · Our Decoration</span>
   </div>
 </footer>
 
 <script>
-  // NAV scroll
-  window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+/* ── Custom cursor ── */
+const dot  = document.getElementById('cursor-dot');
+const ring = document.getElementById('cursor-ring');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; dot.style.left = mx+'px'; dot.style.top = my+'px'; });
+(function animRing() {
+  rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+  ring.style.left = rx+'px'; ring.style.top = ry+'px';
+  requestAnimationFrame(animRing);
+})();
+document.querySelectorAll('a,button,.service-row,.pm-item,.review-card,.ba-card,.fa-item').forEach(el => {
+  el.addEventListener('mouseenter', () => { ring.style.width='48px'; ring.style.height='48px'; ring.style.borderColor='rgba(192,155,90,0.8)'; dot.style.transform='translate(-50%,-50%) scale(0.5)'; });
+  el.addEventListener('mouseleave', () => { ring.style.width='32px'; ring.style.height='32px'; ring.style.borderColor='rgba(192,155,90,0.5)'; dot.style.transform='translate(-50%,-50%) scale(1)'; });
+});
+
+/* ── Nav scroll ── */
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('solid', window.scrollY > 60);
+});
+
+/* ── Mobile menu ── */
+function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeMobile()  { document.getElementById('mobileMenu').classList.remove('open'); }
+
+/* ── Scroll reveal ── */
+const ro = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); ro.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.r, .r-left, .r-right, .r-scale').forEach(el => ro.observe(el));
+
+/* ── Portfolio filter ── */
+function filterPort(btn, cat) {
+  document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.pm-item').forEach(item => {
+    const show = cat === 'all' || item.dataset.cat === cat;
+    item.style.opacity    = show ? '1' : '0.08';
+    item.style.transition = 'opacity 0.4s';
   });
+}
 
-  // Mobile menu
-  function toggleMobile() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-  function closeMobile() {
-    document.getElementById('mobileMenu').classList.remove('open');
-  }
+/* ── Feature accordion ── */
+function toggleFA(header) {
+  const item = header.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.fa-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
 
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  revealEls.forEach(el => observer.observe(el));
-
-  // Portfolio filter
-  function filterPortfolio(btn, cat) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('.portfolio-item').forEach(item => {
-      const show = cat === 'all' || item.dataset.cat === cat;
-      item.style.opacity = show ? '1' : '0.15';
-      item.style.transform = show ? 'scale(1)' : 'scale(0.97)';
-      item.style.transition = 'all 0.3s';
-    });
-  }
-
-  // Form submission
-  function submitForm() {
-    const name = document.getElementById('fname').value.trim();
-    const phone = document.getElementById('fphone').value.trim();
-    if (!name || !phone) {
-      alert('Please fill in your name and mobile number.');
-      return;
-    }
-    const services = [...document.querySelectorAll('.service-checkboxes input:checked')].map(c => c.value).join(', ') || 'Not specified';
-    const prop = document.getElementById('fprop').value || 'Not specified';
-    const msg = document.getElementById('fmsg').value || '';
-    const waText = encodeURIComponent(`Hello MIG Interiors!\n\nName: ${name}\nPhone: ${phone}\nProperty: ${prop}\nServices: ${services}\nMessage: ${msg}`);
-    const toast = document.getElementById('toast');
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 4000);
-    document.getElementById('fname').value = '';
-    document.getElementById('fphone').value = '';
-    document.getElementById('femail').value = '';
-    document.getElementById('fmsg').value = '';
-    document.getElementById('fprop').value = '';
-    document.querySelectorAll('.service-checkboxes input').forEach(c => c.checked = false);
-    setTimeout(() => {
-      window.open(`https://wa.me/917947140988?text=${waText}`, '_blank');
-    }, 600);
-  }
+/* ── Form submit ── */
+function submitEnquiry() {
+  const name  = document.getElementById('fn').value.trim();
+  const phone = document.getElementById('fp').value.trim();
+  if (!name || !phone) { alert('Please enter your name and mobile number.'); return; }
+  const services = [...document.querySelectorAll('.check-grid input:checked')].map(c => c.value).join(', ') || 'Not specified';
+  const prop  = document.getElementById('ft').value || 'Not specified';
+  const msg   = document.getElementById('fm').value || '';
+  const waMsg = encodeURIComponent(`Hello MIG Interiors!\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Property:* ${prop}\n*Services:* ${services}\n*Message:* ${msg}`);
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 4000);
+  ['fn','fp','fe','fm'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('ft').value = '';
+  document.querySelectorAll('.check-grid input').forEach(c => c.checked = false);
+  setTimeout(() => window.open(`https://wa.me/917947140988?text=${waMsg}`, '_blank'), 700);
+}
 </script>
 </body>
 </html>
